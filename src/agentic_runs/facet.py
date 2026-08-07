@@ -63,6 +63,28 @@ PHASES = {
 #: Matching constraint on the emittance phase.
 BMAG_LIMIT = 1.5
 
+
+def repeatability(campaigns, number: int) -> float:
+    """Empirical measurement repeatability for a phase, in the objective's units.
+
+    Every campaign re-measures the point the optimizer selected, so the RMS of
+    those in-scan-versus-re-evaluated differences says how much a repeated
+    measurement moves. It is coarse (n = 5) but it includes drift of the machine
+    between the two measurements, which a fit uncertainty cannot see.
+
+    This is what the energy-spread phase has to use. The emittance phase saved
+    its raw quadrupole scans, so it gets a real per-measurement uncertainty
+    instead; see emitscan.relative_uncertainty.
+    """
+    import math
+
+    diffs = []
+    for campaign in campaigns:
+        phase = campaign.phase(number)
+        if phase and phase.best is not None and phase.reevaluation is not None:
+            diffs.append(abs(phase.best - phase.reevaluation))
+    return math.sqrt(sum(d * d for d in diffs) / len(diffs)) if diffs else 0.0
+
 _STEP_DONE = re.compile(r"Completed workflow step: (\S+).*? in ([\d.]+) s")
 _STAMP = re.compile(r"^(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d),\d+")
 _ERROR = re.compile(r"^(\w*(?:Error|Exception)): (.+)$", re.M)
@@ -78,6 +100,9 @@ class Phase:
     objective: str | None
     values: list[float] = field(default_factory=list)
     constraint: list[float] = field(default_factory=list)
+    #: For the emittance phase, the quadrupole scan behind each evaluation.
+    #: See emitscan.py; empty for every other phase.
+    scans: list[str] = field(default_factory=list)
     n_rows: int = 0
     started: dt.datetime | None = None
     ended: dt.datetime | None = None
@@ -209,6 +234,8 @@ def read_phase(directory: str | Path) -> Phase:
     objective = next(iter(vocs.get("objectives") or {}), None)
     constraint = next(iter(vocs.get("constraints") or {}), None)
     n_rows = len(next(iter(table.values()))) if table else 0
+    # Recorded as "./emittance_scan_<stamp>.h5"; the bare name is the key.
+    scans = [Path(p).name for p in column("save_filename")] if "save_filename" in table else []
     return Phase(
         number=number,
         directory=directory,
@@ -216,6 +243,7 @@ def read_phase(directory: str | Path) -> Phase:
         objective=objective,
         values=column(objective) if objective else [],
         constraint=column(constraint) if constraint and constraint in table else [],
+        scans=scans,
         n_rows=n_rows,
         started=started, ended=ended, seconds=seconds, error=error,
     )

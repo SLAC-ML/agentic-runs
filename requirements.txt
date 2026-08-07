@@ -1,3 +1,8 @@
-# Only two direct dependencies. Any recent version works.
+# Any recent version works.
 matplotlib>=3.7
 PyYAML>=6.0
+
+# Only for the quadrupole-scan emittance uncertainties (src/agentic_runs/emitscan.py).
+h5py>=3.8
+numpy>=1.24
+scipy>=1.10

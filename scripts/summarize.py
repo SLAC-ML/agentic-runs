@@ -11,7 +11,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-from agentic_runs import facet, lcls
+from agentic_runs import emitscan, facet, lcls
 
 
 def summarize_lcls() -> None:
@@ -54,6 +54,23 @@ def summarize_facet() -> None:
           (total_evals, total_seconds // 3600, (total_seconds % 3600) // 60))
 
 
+def check_emittance_fit() -> None:
+    """Confirm the refit still reproduces the fits stored in the scan files.
+
+    If this drifts, the error bars in figure 2b are no longer the uncertainty of
+    the measurement that was actually published.
+    """
+    print()
+    print("Emittance refit vs. the fit stored in each scan file")
+    result = emitscan.verify()
+    print("  plane fits checked                      : %d" % result["n"])
+    print("  agreeing to 1 part in 10^4              : %d" % result["agreeing"])
+    print("  median relative difference              : %.1e" % result["median"])
+    print("  largest                                 : %.1e" % result["worst"])
+    print("  (see README: the stragglers are flat-optimum scans, not a bug)")
+
+
 if __name__ == "__main__":
     summarize_lcls()
     summarize_facet()
+    check_emittance_fit()
