@@ -1,0 +1,18 @@
+2026-07-01 21:59:33,586 - INFO - Starting automatic workflow...
+2026-07-01 21:59:33,586 - INFO - Workflow context: steps=1 dump_location=. reset_env_after=False logging_level=INFO log_file=automatic_workflow_1782968373.log
+2026-07-01 21:59:33,586 - INFO - Ensured workflow output directory exists: .
+2026-07-01 21:59:33,587 - INFO - Creating new FACET-II badger environment.
+2026-07-01 21:59:38,043 - INFO - Running workflow step: optimize_alignment
+2026-07-01 21:59:38,043 - INFO - Step 1/1 parameters: {'n_steps': 100, 'region_fraction': 0.15}
+2026-07-01 21:59:38,754 - INFO - Starting alignment_opt_es.
+2026-07-01 21:59:38,755 - INFO - Starting automatic alignment for screen: PR10571
+2026-07-01 21:59:38,793 - INFO - Initialized generator extremum_seeking
+2026-07-01 21:59:38,797 - INFO - Created alignment Xopt object.
+2026-07-01 21:59:38,797 - INFO - Starting evaluation
+2026-07-01 21:59:38,819 - INFO - evaluating point: {'XCOR:IN10:221:BCTRL': 0.00035140208, 'XCOR:IN10:311:BCTRL': 0.0010431391, 'XCOR:IN10:381:BCTRL': -2.110464e-05, 'XCOR:IN10:411:BCTRL': 0.0006039, 'XCOR:IN10:491:BCTRL': 0.0004852332, 'XCOR:IN10:521:BCTRL': -0.0011821252, 'XCOR:IN10:641:BCTRL': -0.0002505172, 'YCOR:IN10:222:BCTRL': 0.00031471521, 'YCOR:IN10:312:BCTRL': 0.00064077, 'YCOR:IN10:382:BCTRL': -0.0008571227, 'YCOR:IN10:412:BCTRL': 0.00032478616, 'YCOR:IN10:492:BCTRL': -0.0006024, 'YCOR:IN10:522:BCTRL': 0.0004338424, 'YCOR:IN10:642:BCTRL': -0.0016612768}
+2026-07-01 21:59:39,329 - INFO - converged
+2026-07-01 21:59:39,344 - INFO - Appended Xopt serialization for optimize_alignment to ./automatic_workflow_xopt_1782968373.yaml
+2026-07-01 21:59:39,344 - INFO - Completed workflow step: optimize_alignment (step 1/1) in 1.30 s
+2026-07-01 21:59:39,344 - INFO - Skipping post-workflow environment reset (reset_env_after=False).
+2026-07-01 21:59:39,344 - INFO - Automatic workflow completed.
+2026-07-01 21:59:39,344 - INFO - Workflow summary: completed_steps=1 total_steps=1 duration=5.76 s xopt_dump_file=./automatic_workflow_xopt_1782968373.yaml

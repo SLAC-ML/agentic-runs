@@ -1,0 +1,363 @@
+additional_variables: []
+badger_version: 0.0.0
+constraint_formulas: {}
+creation_ts: 2026-06-26-181026
+critical_constraint_names: []
+data:
+  QUAD:LTUS:620:BCTRL:
+    '0': 65.7281
+    '1': 65.7344
+    '10': 65.8469329406
+    '11': 65.9374993203
+    '12': 65.8588495695
+    '13': 65.5931087449
+    '14': 65.9465112709
+    '15': 65.6881810999
+    '16': 65.6258515448
+    '2': 65.7398
+    '3': 65.723
+    '4': 65.723
+    '5': 66.0280657
+    '6': 65.723
+    '7': 65.723
+    '8': 65.723
+    '9': 65.87553285
+  QUAD:LTUS:640:BCTRL:
+    '0': -51.5584
+    '1': -51.5258
+    '10': -51.7103621594
+    '11': -51.7843614297
+    '12': -51.7200989055
+    '13': -51.8583607
+    '14': -51.659305097
+    '15': -51.6390709216
+    '16': -51.6027482945
+    '2': -51.5275
+    '3': -51.6091
+    '4': -51.6091
+    '5': -51.6091
+    '6': -51.8583607
+    '7': -51.6091
+    '8': -51.6091
+    '9': -51.73373035
+  QUAD:LTUS:660:BCTRL:
+    '0': 36.8714
+    '1': 36.9284
+    '10': 36.9884133594
+    '11': 36.6175891797
+    '12': 36.6151812305
+    '13': 36.6163852051
+    '14': 36.816922226
+    '15': 36.9616625485
+    '16': 37.0476808907
+    '2': 36.8238
+    '3': 36.8632
+    '4': 36.8632
+    '5': 36.8632
+    '6': 36.8632
+    '7': 37.1714175
+    '8': 36.8632
+    '9': 37.01730875
+  QUAD:LTUS:680:BCTRL:
+    '0': -25.4081
+    '1': -25.4081
+    '10': -25.1876323125
+    '11': -25.2877161562
+    '12': -25.5379257656
+    '13': -25.4128209609
+    '14': -25.3924914302
+    '15': -25.5652924417
+    '16': -25.634686513
+    '2': -25.3761
+    '3': -25.3878
+    '4': -25.3878
+    '5': -25.3878
+    '6': -25.3878
+    '7': -25.3878
+    '8': -25.7080683
+    '9': -25.1080683
+  live:
+    '0': 1
+    '1': 1
+    '10': 1
+    '11': 1
+    '12': 1
+    '13': 1
+    '14': 1
+    '15': 1
+    '16': 1
+    '2': 1
+    '3': 1
+    '4': 1
+    '5': 1
+    '6': 1
+    '7': 1
+    '8': 1
+    '9': 1
+  pulse_intensity_mean:
+    '0': 0.3192504883
+    '1': 0.3030293783
+    '10': 0.2766377767
+    '11': 0.2856872559
+    '12': 0.2892659505
+    '13': 0.2542561849
+    '14': 0.2990804036
+    '15': 0.3002604167
+    '16': 0.2904134115
+    '2': 0.329876709
+    '3': 0.2967610677
+    '4': 0.2970438639
+    '5': 0.280259196
+    '6': 0.2884765625
+    '7': 0.2709513346
+    '8': 0.2583699544
+    '9': 0.2663289388
+  timestamp:
+    '0': 1782522631.368742
+    '1': 1782522635.501319
+    '10': 1782522672.065472
+    '11': 1782522676.098215
+    '12': 1782522680.138066
+    '13': 1782522684.174264
+    '14': 1782522688.21227
+    '15': 1782522692.251036
+    '16': 1782522696.287265
+    '2': 1782522639.620688
+    '3': 1782522643.739909
+    '4': 1782522647.863163
+    '5': 1782522651.899757
+    '6': 1782522655.932596
+    '7': 1782522659.966905
+    '8': 1782522663.997924
+    '9': 1782522668.030976
+  xopt_error:
+    '0': false
+    '1': false
+    '10': false
+    '11': false
+    '12': false
+    '13': false
+    '14': false
+    '15': false
+    '16': false
+    '2': false
+    '3': false
+    '4': false
+    '5': false
+    '6': false
+    '7': false
+    '8': false
+    '9': false
+  xopt_runtime:
+    '0': 4.2053530524
+    '1': 4.0082844943
+    '10': 4.0084276898
+    '11': 4.007533825
+    '12': 4.0085364981
+    '13': 4.008612697
+    '14': 4.0094795236
+    '15': 4.0083295265
+    '16': 4.00758781
+    '2': 4.0081557333
+    '3': 4.0086586587
+    '4': 4.0089133363
+    '5': 4.0080035189
+    '6': 4.008686644
+    '7': 4.0079364693
+    '8': 4.0076158708
+    '9': 4.0082967374
+description: Template LTUH matching quads
+environment:
+  beamrate_pv: EVNT:SYS0:1:LCLSBEAMRATE
+  beamsize_monitor_base_pv: null
+  buffer_length_s: 1.0
+  charge_pv: SIOC:SYS0:ML00:CALC252
+  check_fault_timeout: 5.0
+  check_var_timeout: 1.0
+  current_pv: BLEN:LI24:886:BIMAX
+  energy_pv: BEND:DMPH:400:BDES
+  interface:
+    name: epics
+  loss_pv: LBLM:COL0:862:A:I0_LOSSHSTSCS
+  name: lcls
+  pulse_id_pv: PATT:SYS0:1:PULSEID
+  readonly: false
+  sxr_pulse_intensity_pv: EM1K0:GMD:HPS:milliJoulesPerPulseHSTCUSBR
+  trim_delay: 3.0
+  validate_variable_set: false
+formulas: {}
+generator:
+  adaptive: true
+  current_state:
+    N: 4
+    astg: 2
+    doshrink: 0
+    fsim:
+    - -0.2990804036458333
+    - -0.29704386393229165
+    - -0.2892659505208333
+    - -0.2884765625
+    - -0.285687255859375
+    fxr: -0.30026041666666664
+    ind:
+    - 4.0
+    - 0.0
+    - 1.0
+    - 2.0
+    - 3.0
+    jend: 0
+    kend: 5
+    ngen: 13
+    sim:
+    - - 65.94651127092285
+      - -51.6593050970459
+      - 36.81692222595215
+      - -25.39249143017578
+    - - 65.723
+      - -51.6091
+      - 36.8632
+      - -25.3878
+    - - 65.85884956953124
+      - -51.72009890546875
+      - 36.615181230468764
+      - -25.537925765625005
+    - - 65.723
+      - -51.8583607
+      - 36.8632
+      - -25.3878
+    - - 65.93749932031248
+      - -51.78436142968752
+      - 36.61758917968749
+      - -25.28771615625
+    x: null
+    xbar:
+    - 65.81284021011352
+    - -51.71171617562866
+    - 36.789625864105226
+    - -25.426504298950196
+    xc:
+    - 65.846932940625
+    - -51.710362159375016
+    - 36.98841335937499
+    - -25.187632312499993
+    xcc:
+    - 65.94651127092285
+    - -51.6593050970459
+    - 36.81692222595215
+    - -25.39249143017578
+    xe:
+    - 65.62585154481508
+    - -51.60274829454036
+    - 37.047680890731826
+    - -25.63468651300049
+    xr:
+    - 65.68818109991456
+    - -51.6390709215698
+    - 36.96166254852296
+    - -25.565292441650392
+  future_state: null
+  initial_point: null
+  initial_simplex: null
+  is_active: true
+  manual_data_cnt: 4
+  name: neldermead
+  returns_id: false
+  supports_single_objective: true
+  trace: false
+  vocs:
+    constants: {}
+    constraints: {}
+    objectives:
+      pulse_intensity_mean:
+        dtype: null
+        type: MaximizeObjective
+    observables: {}
+    variables:
+      QUAD:LTUS:620:BCTRL:
+        default_value: null
+        domain:
+        - 65.4280657
+        - 66.0280657
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUS:640:BCTRL:
+        default_value: null
+        domain:
+        - -51.8583607
+        - -51.258360700000004
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUS:660:BCTRL:
+        default_value: null
+        domain:
+        - 36.5714175
+        - 37.1714175
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUS:680:BCTRL:
+        default_value: null
+        domain:
+        - -25.7080683
+        - -25.1080683
+        dtype: null
+        type: ContinuousVariable
+  x: null
+  y: -0.2904134114583333
+id: null
+initial_point_actions:
+- type: add_curr
+- config:
+    fraction: 0.1
+    method: 0
+    n_points: 3
+  type: add_rand
+initial_points:
+  QUAD:LTUS:620:BCTRL:
+    '0': 65.7281
+    '1': 65.7344
+    '2': 65.7398
+    '3': 65.723
+  QUAD:LTUS:640:BCTRL:
+    '0': -51.5584
+    '1': -51.5258
+    '2': -51.5275
+    '3': -51.6091
+  QUAD:LTUS:660:BCTRL:
+    '0': 36.8714
+    '1': 36.9284
+    '2': 36.8238
+    '3': 36.8632
+  QUAD:LTUS:680:BCTRL:
+    '0': -25.4081
+    '1': -25.4081
+    '2': -25.3761
+    '3': -25.3878
+name: LTUH matching quads
+observable_formulas: {}
+relative_to_current: true
+script: null
+stopping_condition: null
+tags: null
+vrange_hard_limit: {}
+vrange_limit_options:
+  QUAD:LTUS:620:BCTRL:
+    delta: 0.3
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUS:640:BCTRL:
+    delta: 0.3
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUS:660:BCTRL:
+    delta: 0.3
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUS:680:BCTRL:
+    delta: 0.3
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+xopt_version: 3.0.1

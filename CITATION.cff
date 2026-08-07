@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: "Agentic tuning run data: LCLS and FACET-II, June-July 2026"
+message: "If you use this data or code, please cite the paper it supports."
+type: dataset
+authors:
+  - family-names: Zhang
+    given-names: Zhe
+    affiliation: SLAC National Accelerator Laboratory
+license: BSD-3-Clause
+repository-code: "https://github.com/REPLACE-ME/agentic-runs"
+abstract: >-
+  Raw optimizer archives and runner logs from the agent-orchestrated tuning
+  campaigns on the LCLS hard X-ray line (26 June 2026) and the FACET-II
+  injector (1-2 July 2026), with the code that turns them into the figures and
+  tables of the accompanying paper.

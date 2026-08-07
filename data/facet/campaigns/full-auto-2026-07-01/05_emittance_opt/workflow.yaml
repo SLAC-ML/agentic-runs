@@ -1,0 +1,12 @@
+- n_steps: 3
+  type: minimize_injector_emittance
+  variables:
+    QUAD:IN10:121:BCTRL:
+    - -0.008
+    - 0.008
+    QUAD:IN10:122:BCTRL:
+    - -0.008
+    - 0.008
+    SOLN:IN10:121:BCTRL:
+    - 0.39
+    - 0.41

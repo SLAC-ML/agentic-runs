@@ -1,0 +1,139 @@
+2026-07-01 21:21:39,749 - INFO - Starting automatic workflow...
+2026-07-01 21:21:39,750 - INFO - Workflow context: steps=1 dump_location=. reset_env_after=False logging_level=INFO log_file=automatic_workflow_1782966099.log
+2026-07-01 21:21:39,750 - INFO - Ensured workflow output directory exists: .
+2026-07-01 21:21:39,751 - INFO - Creating new FACET-II badger environment.
+2026-07-01 21:21:43,339 - INFO - Running workflow step: optimize_schottky
+2026-07-01 21:21:43,339 - INFO - Step 1/1 parameters: {}
+2026-07-01 21:21:44,076 - INFO - Starting auto_schottky_scan.
+2026-07-01 21:21:44,077 - INFO - inserting Faraday cup, interrupting feedbacks
+2026-07-01 21:21:54,212 - INFO - Initialized generator annotation=NoneType required=True description='generator name'
+2026-07-01 21:21:54,221 - INFO - Created Schottky Xopt object.
+2026-07-01 21:21:54,221 - INFO - Starting automatic Schottky scan with Amortized BOED generator.
+2026-07-01 21:21:54,222 - INFO - Running 100 steps (10 grid + 90 BOED)...
+2026-07-01 21:21:54,222 - INFO - Running Xopt step
+2026-07-01 21:21:56,748 - INFO - Running Xopt step
+2026-07-01 21:21:59,259 - INFO - Running Xopt step
+2026-07-01 21:22:01,768 - INFO - Running Xopt step
+2026-07-01 21:22:04,277 - INFO - Running Xopt step
+2026-07-01 21:22:06,785 - INFO - Running Xopt step
+2026-07-01 21:22:09,294 - INFO - Running Xopt step
+2026-07-01 21:22:11,808 - INFO - Running Xopt step
+2026-07-01 21:22:14,317 - INFO - Running Xopt step
+2026-07-01 21:22:16,828 - INFO - Running Xopt step
+2026-07-01 21:22:19,337 - INFO - BOED step 0 / 90
+2026-07-01 21:22:19,337 - INFO - Running Xopt step
+2026-07-01 21:22:21,947 - INFO - Running Xopt step
+2026-07-01 21:22:24,465 - INFO - Running Xopt step
+2026-07-01 21:22:26,975 - INFO - Running Xopt step
+2026-07-01 21:22:29,487 - INFO - Running Xopt step
+2026-07-01 21:22:31,998 - INFO - BOED step 5 / 90
+2026-07-01 21:22:31,998 - INFO - Running Xopt step
+2026-07-01 21:22:34,509 - INFO - Running Xopt step
+2026-07-01 21:22:37,019 - INFO - Running Xopt step
+2026-07-01 21:22:39,530 - INFO - Running Xopt step
+2026-07-01 21:22:42,039 - INFO - Running Xopt step
+2026-07-01 21:22:44,551 - INFO - BOED step 10 / 90
+2026-07-01 21:22:44,551 - INFO - Running Xopt step
+2026-07-01 21:22:47,089 - INFO - Running Xopt step
+2026-07-01 21:22:49,610 - INFO - Running Xopt step
+2026-07-01 21:22:52,119 - INFO - Running Xopt step
+2026-07-01 21:22:54,629 - INFO - Running Xopt step
+2026-07-01 21:22:57,139 - INFO - BOED step 15 / 90
+2026-07-01 21:22:57,139 - INFO - Running Xopt step
+2026-07-01 21:22:59,648 - INFO - Running Xopt step
+2026-07-01 21:23:02,158 - INFO - Running Xopt step
+2026-07-01 21:23:04,669 - INFO - Running Xopt step
+2026-07-01 21:23:07,181 - INFO - Running Xopt step
+2026-07-01 21:23:09,692 - INFO - BOED step 20 / 90
+2026-07-01 21:23:09,692 - INFO - Running Xopt step
+2026-07-01 21:23:12,228 - INFO - Running Xopt step
+2026-07-01 21:23:14,746 - INFO - Running Xopt step
+2026-07-01 21:23:17,257 - INFO - Running Xopt step
+2026-07-01 21:23:19,767 - INFO - Running Xopt step
+2026-07-01 21:23:22,277 - INFO - BOED step 25 / 90
+2026-07-01 21:23:22,277 - INFO - Running Xopt step
+2026-07-01 21:23:24,787 - INFO - Running Xopt step
+2026-07-01 21:23:27,297 - INFO - Running Xopt step
+2026-07-01 21:23:29,809 - INFO - Running Xopt step
+2026-07-01 21:23:32,323 - INFO - Running Xopt step
+2026-07-01 21:23:34,833 - INFO - BOED step 30 / 90
+2026-07-01 21:23:34,833 - INFO - Running Xopt step
+2026-07-01 21:23:37,364 - INFO - Running Xopt step
+2026-07-01 21:23:39,882 - INFO - Running Xopt step
+2026-07-01 21:23:42,393 - INFO - Running Xopt step
+2026-07-01 21:23:44,903 - INFO - Running Xopt step
+2026-07-01 21:23:47,413 - INFO - BOED step 35 / 90
+2026-07-01 21:23:47,413 - INFO - Running Xopt step
+2026-07-01 21:23:49,923 - INFO - Running Xopt step
+2026-07-01 21:23:52,433 - INFO - Running Xopt step
+2026-07-01 21:23:54,943 - INFO - Running Xopt step
+2026-07-01 21:23:57,453 - INFO - Running Xopt step
+2026-07-01 21:23:59,964 - INFO - BOED step 40 / 90
+2026-07-01 21:23:59,964 - INFO - Running Xopt step
+2026-07-01 21:24:02,506 - INFO - Running Xopt step
+2026-07-01 21:24:05,025 - INFO - Running Xopt step
+2026-07-01 21:24:07,535 - INFO - Running Xopt step
+2026-07-01 21:24:10,045 - INFO - Running Xopt step
+2026-07-01 21:24:12,554 - INFO - BOED step 45 / 90
+2026-07-01 21:24:12,554 - INFO - Running Xopt step
+2026-07-01 21:24:15,064 - INFO - Running Xopt step
+2026-07-01 21:24:17,573 - INFO - Running Xopt step
+2026-07-01 21:24:20,083 - INFO - Running Xopt step
+2026-07-01 21:24:22,592 - INFO - Running Xopt step
+2026-07-01 21:24:25,102 - INFO - BOED step 50 / 90
+2026-07-01 21:24:25,102 - INFO - Running Xopt step
+2026-07-01 21:24:27,634 - INFO - Running Xopt step
+2026-07-01 21:24:30,158 - INFO - Running Xopt step
+2026-07-01 21:24:32,668 - INFO - Running Xopt step
+2026-07-01 21:24:35,178 - INFO - Running Xopt step
+2026-07-01 21:24:37,690 - INFO - BOED step 55 / 90
+2026-07-01 21:24:37,690 - INFO - Running Xopt step
+2026-07-01 21:24:40,200 - INFO - Running Xopt step
+2026-07-01 21:24:42,713 - INFO - Running Xopt step
+2026-07-01 21:24:45,227 - INFO - Running Xopt step
+2026-07-01 21:24:47,741 - INFO - Running Xopt step
+2026-07-01 21:24:50,251 - INFO - BOED step 60 / 90
+2026-07-01 21:24:50,251 - INFO - Running Xopt step
+2026-07-01 21:24:52,781 - INFO - Running Xopt step
+2026-07-01 21:24:55,301 - INFO - Running Xopt step
+2026-07-01 21:24:57,813 - INFO - Running Xopt step
+2026-07-01 21:25:00,323 - INFO - Running Xopt step
+2026-07-01 21:25:02,837 - INFO - BOED step 65 / 90
+2026-07-01 21:25:02,837 - INFO - Running Xopt step
+2026-07-01 21:25:05,347 - INFO - Running Xopt step
+2026-07-01 21:25:07,857 - INFO - Running Xopt step
+2026-07-01 21:25:10,367 - INFO - Running Xopt step
+2026-07-01 21:25:12,877 - INFO - Running Xopt step
+2026-07-01 21:25:15,388 - INFO - BOED step 70 / 90
+2026-07-01 21:25:15,388 - INFO - Running Xopt step
+2026-07-01 21:25:17,921 - INFO - Running Xopt step
+2026-07-01 21:25:20,438 - INFO - Running Xopt step
+2026-07-01 21:25:22,949 - INFO - Running Xopt step
+2026-07-01 21:25:25,460 - INFO - Running Xopt step
+2026-07-01 21:25:27,971 - INFO - BOED step 75 / 90
+2026-07-01 21:25:27,971 - INFO - Running Xopt step
+2026-07-01 21:25:30,481 - INFO - Running Xopt step
+2026-07-01 21:25:32,993 - INFO - Running Xopt step
+2026-07-01 21:25:35,503 - INFO - Running Xopt step
+2026-07-01 21:25:38,014 - INFO - Running Xopt step
+2026-07-01 21:25:40,526 - INFO - BOED step 80 / 90
+2026-07-01 21:25:40,526 - INFO - Running Xopt step
+2026-07-01 21:25:43,056 - INFO - Running Xopt step
+2026-07-01 21:25:45,573 - INFO - Running Xopt step
+2026-07-01 21:25:48,082 - INFO - Running Xopt step
+2026-07-01 21:25:50,592 - INFO - Running Xopt step
+2026-07-01 21:25:53,102 - INFO - BOED step 85 / 90
+2026-07-01 21:25:53,102 - INFO - Running Xopt step
+2026-07-01 21:25:55,613 - INFO - Running Xopt step
+2026-07-01 21:25:58,123 - INFO - Running Xopt step
+2026-07-01 21:26:00,633 - INFO - Running Xopt step
+2026-07-01 21:26:03,142 - INFO - Running Xopt step
+2026-07-01 21:26:05,671 - INFO - BOED step 90 / 90
+2026-07-01 21:26:07,696 - INFO - best T0 estimate from BOED scan: 0.26° gunphase
+2026-07-01 21:26:07,696 - INFO - removing the faraday cup and restarting feedbacks
+2026-07-01 21:26:07,696 - INFO - Automatic Schottky scan complete.
+2026-07-01 21:26:07,732 - INFO - Appended Xopt serialization for optimize_schottky to ./automatic_workflow_xopt_1782966099.yaml
+2026-07-01 21:26:07,732 - INFO - Completed workflow step: optimize_schottky (step 1/1) in 264.39 s
+2026-07-01 21:26:07,732 - INFO - Skipping post-workflow environment reset (reset_env_after=False).
+2026-07-01 21:26:07,732 - INFO - Automatic workflow completed.
+2026-07-01 21:26:07,732 - INFO - Workflow summary: completed_steps=1 total_steps=1 duration=267.98 s xopt_dump_file=./automatic_workflow_xopt_1782966099.yaml

@@ -1,0 +1,126 @@
+/home/fphysics/zhezhang/AgenticOpt/bax_algorithms/bax_algorithms/solenoid_alignment.py:21: UserWarning: Field name "name" in "PathwiseSolenoidAlignment" shadows an attribute in parent "PathwiseOptimization"
+  class PathwiseSolenoidAlignment(PathwiseOptimization):
+2026-07-01 23:36:35,386 - INFO - Starting automatic workflow...
+2026-07-01 23:36:35,386 - INFO - Workflow context: steps=1 dump_location=. reset_env_after=False logging_level=INFO log_file=automatic_workflow_1782974195.log
+2026-07-01 23:36:35,387 - INFO - Ensured workflow output directory exists: .
+2026-07-01 23:36:35,387 - INFO - Creating new FACET-II badger environment.
+/home/fphysics/zhezhang/AgenticOpt/Badger/src/badger/environment.py:131: UserWarning: Field name "variables" in "Environment" shadows an attribute in parent "BaseAutomaticEmittanceEnvironment"
+  return super().__new__(mcs, name, bases, namespace)
+2026-07-01 23:36:39,695 - INFO - Running workflow step: minimize_energy_spread
+2026-07-01 23:36:39,695 - INFO - Step 1/1 parameters: {}
+2026-07-01 23:36:40,378 - INFO - Starting e_spread_opt.
+2026-07-01 23:36:40,404 - INFO - Starting energy spread optimization.
+2026-07-01 23:36:44,955 - INFO - Initialized generator expected_improvement
+2026-07-01 23:36:44,955 - INFO - Running initial random evaluations.
+2026-07-01 23:37:16,590 - ERROR - Klystron phase failed to settle within timeout: target=-10.092819822520557 readback=-10.449728392350533 polls=40
+2026-07-01 23:37:26,065 - ERROR - e_spread_opt failed with an unhandled exception:
+Traceback (most recent call last):
+  File "/home/fphysics/zhezhang/AgenticOpt/autonomous-control/autonomous_control/facet/optimization_utils.py", line 139, in run_script_with_restore
+    return script_fn(env, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fphysics/zhezhang/AgenticOpt/autonomous-control/autonomous_control/facet/e_spread_opt.py", line 189, in minimize_energy_spread
+    X.random_evaluate(settings["initial_random_evaluations"])
+  File "/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/xopt/base.py", line 544, in random_evaluate
+    result = self.evaluate_data(ri)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/xopt/base.py", line 429, in evaluate_data
+    validate_outputs(output_data)
+  File "/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/xopt/evaluator.py", line 355, in validate_outputs
+    raise XoptError(error_string)
+xopt.errors.XoptError: Xopt evaluator caught exception(s):
+
+Evaluation index 0:
+nan
+Evaluation index 1:
+Traceback (most recent call last):
+  File "/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/xopt/utils.py", line 149, in safe_call
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fphysics/zhezhang/AgenticOpt/autonomous-control/autonomous_control/facet/e_spread_opt.py", line 141, in evaluate
+    raise TimeoutError(msg)
+TimeoutError: Klystron phase failed to settle within timeout: target=-10.092819822520557 readback=-10.449728392350533 polls=40
+
+Evaluation index 2:
+nan
+
+
+2026-07-01 23:37:26,065 - WARNING - Attempting to restore machine to state captured before e_spread_opt: {'SOLN:IN10:121:BCTRL': 0.3936154005589164, 'QUAD:IN10:121:BCTRL': 0.001306548527727039, 'QUAD:IN10:122:BCTRL': 0.006143228164986027, 'QUAD:IN10:511:BCTRL': 5.0639811, 'QUAD:IN10:441:BCTRL': 5.3496533, 'QUAD:IN10:425:BCTRL': -4.0552702, 'QUAD:IN10:371:BCTRL': 2.8580495, 'QUAD:IN10:361:BCTRL': -2.7497786, 'QUAD:IN10:631:BCTRL': 4.8092115, 'QUAD:IN10:651:BCTRL': -5.4933819, 'XCOR:IN10:121:BCTRL': -0.0004255335, 'XCOR:IN10:221:BCTRL': 0.00035275608302617623, 'XCOR:IN10:311:BCTRL': 0.0010268849418724475, 'XCOR:IN10:491:BCTRL': 0.0004518529604565884, 'XCOR:IN10:521:BCTRL': -0.0012158490614903878, 'XCOR:IN10:641:BCTRL': -0.00024862738810708116, 'YCOR:IN10:122:BCTRL': 0.00082021908, 'YCOR:IN10:222:BCTRL': 0.00030823715010757394, 'YCOR:IN10:312:BCTRL': 0.0006316537552323975, 'YCOR:IN10:522:BCTRL': 0.0004286252776751139, 'YCOR:IN10:492:BCTRL': -0.0006559061160423744, 'YCOR:IN10:642:BCTRL': -0.0016887325745823017, 'KLYS:LI10:51:ADES': 4.0, 'KLYS:LI10:51:PDES': 92.7549681348903, 'KLYS:LI10:41:SFB_PDES': -11.29500329269446}
+2026-07-01 23:37:28,164 - WARNING - Machine state restored successfully after e_spread_opt failure.
+2026-07-01 23:37:28,164 - ERROR - Workflow step failed: minimize_energy_spread (step 1/1) after 48.47 s
+Traceback (most recent call last):
+  File "/home/fphysics/zhezhang/AgenticOpt/autonomous-control/autonomous_control/facet/runner.py", line 152, in run_automatic_workflow
+    step_result = step_handler(env, **step_kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fphysics/zhezhang/AgenticOpt/autonomous-control/autonomous_control/facet/optimization_utils.py", line 70, in wrapper
+    return run_script_with_restore(fn, env, *args, context=label, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fphysics/zhezhang/AgenticOpt/autonomous-control/autonomous_control/facet/optimization_utils.py", line 139, in run_script_with_restore
+    return script_fn(env, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fphysics/zhezhang/AgenticOpt/autonomous-control/autonomous_control/facet/e_spread_opt.py", line 189, in minimize_energy_spread
+    X.random_evaluate(settings["initial_random_evaluations"])
+  File "/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/xopt/base.py", line 544, in random_evaluate
+    result = self.evaluate_data(ri)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/xopt/base.py", line 429, in evaluate_data
+    validate_outputs(output_data)
+  File "/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/xopt/evaluator.py", line 355, in validate_outputs
+    raise XoptError(error_string)
+xopt.errors.XoptError: Xopt evaluator caught exception(s):
+
+Evaluation index 0:
+nan
+Evaluation index 1:
+Traceback (most recent call last):
+  File "/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/xopt/utils.py", line 149, in safe_call
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fphysics/zhezhang/AgenticOpt/autonomous-control/autonomous_control/facet/e_spread_opt.py", line 141, in evaluate
+    raise TimeoutError(msg)
+TimeoutError: Klystron phase failed to settle within timeout: target=-10.092819822520557 readback=-10.449728392350533 polls=40
+
+Evaluation index 2:
+nan
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/fphysics/zhezhang/AgenticOpt/autonomous-control/autonomous_control/facet/runner.py", line 298, in <module>
+    run_automatic_workflow_from_file(
+  File "/home/fphysics/zhezhang/AgenticOpt/autonomous-control/autonomous_control/facet/runner.py", line 255, in run_automatic_workflow_from_file
+    return run_automatic_workflow(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fphysics/zhezhang/AgenticOpt/autonomous-control/autonomous_control/facet/runner.py", line 152, in run_automatic_workflow
+    step_result = step_handler(env, **step_kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fphysics/zhezhang/AgenticOpt/autonomous-control/autonomous_control/facet/optimization_utils.py", line 70, in wrapper
+    return run_script_with_restore(fn, env, *args, context=label, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fphysics/zhezhang/AgenticOpt/autonomous-control/autonomous_control/facet/optimization_utils.py", line 139, in run_script_with_restore
+    return script_fn(env, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fphysics/zhezhang/AgenticOpt/autonomous-control/autonomous_control/facet/e_spread_opt.py", line 189, in minimize_energy_spread
+    X.random_evaluate(settings["initial_random_evaluations"])
+  File "/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/xopt/base.py", line 544, in random_evaluate
+    result = self.evaluate_data(ri)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/xopt/base.py", line 429, in evaluate_data
+    validate_outputs(output_data)
+  File "/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/xopt/evaluator.py", line 355, in validate_outputs
+    raise XoptError(error_string)
+xopt.errors.XoptError: Xopt evaluator caught exception(s):
+
+Evaluation index 0:
+nan
+Evaluation index 1:
+Traceback (most recent call last):
+  File "/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/xopt/utils.py", line 149, in safe_call
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fphysics/zhezhang/AgenticOpt/autonomous-control/autonomous_control/facet/e_spread_opt.py", line 141, in evaluate
+    raise TimeoutError(msg)
+TimeoutError: Klystron phase failed to settle within timeout: target=-10.092819822520557 readback=-10.449728392350533 polls=40
+
+Evaluation index 2:
+nan
+

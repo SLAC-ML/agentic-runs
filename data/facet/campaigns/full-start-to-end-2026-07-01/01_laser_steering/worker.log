@@ -1,0 +1,93 @@
+/home/fphysics/zhezhang/AgenticOpt/bax_algorithms/bax_algorithms/solenoid_alignment.py:21: UserWarning: Field name "name" in "PathwiseSolenoidAlignment" shadows an attribute in parent "PathwiseOptimization"
+  class PathwiseSolenoidAlignment(PathwiseOptimization):
+2026-07-01 21:51:46,992 - INFO - Starting automatic workflow...
+2026-07-01 21:51:46,993 - INFO - Workflow context: steps=1 dump_location=. reset_env_after=False logging_level=INFO log_file=automatic_workflow_1782967906.log
+2026-07-01 21:51:46,993 - INFO - Ensured workflow output directory exists: .
+2026-07-01 21:51:46,993 - INFO - Creating new FACET-II badger environment.
+/home/fphysics/zhezhang/AgenticOpt/Badger/src/badger/environment.py:131: UserWarning: Field name "variables" in "Environment" shadows an attribute in parent "BaseAutomaticEmittanceEnvironment"
+  return super().__new__(mcs, name, bases, namespace)
+2026-07-01 21:51:52,368 - INFO - Running workflow step: optimize_laser_steering
+2026-07-01 21:51:52,368 - INFO - Step 1/1 parameters: {'n_steps': 20, 'initial_random_evaluations': 10}
+2026-07-01 21:51:52,368 - INFO - Starting BAX solenoid alignment optimization.
+2026-07-01 21:51:52,368 - INFO - Solenoid alignment config: initial_random_evaluations=10 n_steps=20 dump_location=None
+2026-07-01 21:51:52,463 - INFO - Initialized generator bax
+2026-07-01 21:51:52,468 - INFO - Running initial evaluations (current + 10 random points).
+2026-07-01 21:52:14,574 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:52:18,768 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:52:22,945 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:52:27,207 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:52:31,267 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:52:35,827 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:52:39,986 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:52:44,016 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:52:48,019 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:52:52,165 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:52:56,286 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:53:00,456 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:53:05,107 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:53:09,460 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:53:13,808 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:53:18,277 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:53:22,567 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:53:26,507 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:53:30,815 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+2026-07-01 21:53:35,480 - INFO - Running Xopt step
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/scipy/optimize/_differentialevolution.py:518: UserWarning: differential_evolution: the 'vectorized' keyword has overridden updating='immediate' to updating='deferred'
+  with DifferentialEvolutionSolver(func, bounds, args=args,
+Beginning BAX virtual optimization.
+BAX virtual optimization took: 0.6565468311309814 seconds.
+2026-07-01 21:53:41,371 - INFO - Evaluating best point during solenoid alignment optimization.
+2026-07-01 21:53:43,379 - INFO - Best point evaluated during solenoid alignment optimization.
+2026-07-01 21:53:43,379 - INFO - Completed solenoid alignment optimization.
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/linear_operator/utils/cholesky.py:41: NumericalWarning: A not p.d., added jitter of 1.0e-08 to the diagonal
+  warnings.warn(
+2026-07-01 21:53:45,686 - INFO - Solenoid alignment summary: evaluations=32 dump_file=None png=./solenoid_alignment_opt_1782967912.png duration=113.32 s
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/pydantic/main.py:475: UserWarning: Pydantic serializer warnings:
+  PydanticSerializationUnexpectedValue(Expected `VirtualOptimizer` - serialized value may not be as expected [field_name='optimizer', input_value=DifferentialEvolution(min...axiter=10, polish=False), input_type=DifferentialEvolution])
+  PydanticSerializationUnexpectedValue(Expected `VirtualOptimizer` - serialized value may not be as expected [field_name='optimizer', input_value=DifferentialEvolution(min...axiter=10, polish=False), input_type=DifferentialEvolution])
+  return self.__pydantic_serializer__.to_python(
+2026-07-01 21:53:45,708 - INFO - Appended Xopt serialization for optimize_laser_steering to ./automatic_workflow_xopt_1782967906.yaml
+2026-07-01 21:53:45,708 - INFO - Completed workflow step: optimize_laser_steering (step 1/1) in 113.34 s
+2026-07-01 21:53:45,708 - INFO - Skipping post-workflow environment reset (reset_env_after=False).
+2026-07-01 21:53:45,708 - INFO - Automatic workflow completed.
+2026-07-01 21:53:45,708 - INFO - Workflow summary: completed_steps=1 total_steps=1 duration=118.72 s xopt_dump_file=./automatic_workflow_xopt_1782967906.yaml

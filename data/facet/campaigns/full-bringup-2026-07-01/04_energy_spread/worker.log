@@ -1,0 +1,28 @@
+/home/fphysics/zhezhang/AgenticOpt/bax_algorithms/bax_algorithms/solenoid_alignment.py:21: UserWarning: Field name "name" in "PathwiseSolenoidAlignment" shadows an attribute in parent "PathwiseOptimization"
+  class PathwiseSolenoidAlignment(PathwiseOptimization):
+2026-07-01 22:41:07,949 - INFO - Starting automatic workflow...
+2026-07-01 22:41:07,950 - INFO - Workflow context: steps=1 dump_location=. reset_env_after=False logging_level=INFO log_file=automatic_workflow_1782970867.log
+2026-07-01 22:41:07,950 - INFO - Ensured workflow output directory exists: .
+2026-07-01 22:41:07,950 - INFO - Creating new FACET-II badger environment.
+/home/fphysics/zhezhang/AgenticOpt/Badger/src/badger/environment.py:131: UserWarning: Field name "variables" in "Environment" shadows an attribute in parent "BaseAutomaticEmittanceEnvironment"
+  return super().__new__(mcs, name, bases, namespace)
+2026-07-01 22:41:11,707 - INFO - Running workflow step: minimize_energy_spread
+2026-07-01 22:41:11,707 - INFO - Step 1/1 parameters: {}
+2026-07-01 22:41:12,391 - INFO - Starting e_spread_opt.
+2026-07-01 22:41:12,420 - INFO - Starting energy spread optimization.
+2026-07-01 22:41:16,895 - INFO - Initialized generator expected_improvement
+2026-07-01 22:41:16,895 - INFO - Running initial random evaluations.
+2026-07-01 22:41:48,788 - INFO - Running Xopt step
+2026-07-01 22:42:01,513 - INFO - Running Xopt step
+2026-07-01 22:42:18,657 - INFO - Running Xopt step
+2026-07-01 22:42:28,836 - INFO - Running Xopt step
+2026-07-01 22:42:36,209 - INFO - Running Xopt step
+2026-07-01 22:42:42,841 - INFO - Optimization loop complete.
+2026-07-01 22:42:42,844 - INFO - Evaluating best point during energy spread optimization.
+2026-07-01 22:42:45,280 - INFO - Best point evaluated during energy spread optimization.
+2026-07-01 22:42:45,281 - INFO - Energy spread optimization finished.
+2026-07-01 22:42:45,292 - INFO - Appended Xopt serialization for minimize_energy_spread to ./automatic_workflow_xopt_1782970867.yaml
+2026-07-01 22:42:45,292 - INFO - Completed workflow step: minimize_energy_spread (step 1/1) in 93.58 s
+2026-07-01 22:42:45,292 - INFO - Skipping post-workflow environment reset (reset_env_after=False).
+2026-07-01 22:42:45,292 - INFO - Automatic workflow completed.
+2026-07-01 22:42:45,292 - INFO - Workflow summary: completed_steps=1 total_steps=1 duration=97.34 s xopt_dump_file=./automatic_workflow_xopt_1782970867.yaml

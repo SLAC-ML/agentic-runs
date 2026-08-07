@@ -1,0 +1,198 @@
+additional_variables: []
+badger_version: 1.5.5.dev45+gf333a632c.d20260626
+constraint_formulas:
+  CBLM:UNDH:1375:I1_LOSS:
+    formula: ''
+    variable_mapping: {}
+creation_ts: 2026-06-26-200256
+critical_constraint_names:
+- CBLM:UNDH:1375:I1_LOSS
+data:
+  CBLM:UNDH:1375:I1_LOSS:
+    '0': -0.38742
+    '1': 0.0
+    '2': -0.21132
+    '3': -0.03522
+  QUAD:LTUH:620:BCTRL:
+    '0': -31.728
+    '1': -31.5404
+    '2': -31.5357
+    '3': -31.3981
+  QUAD:LTUH:640:BCTRL:
+    '0': 37.2156
+    '1': 37.3842
+    '2': 37.357
+    '3': 36.9532
+  QUAD:LTUH:660:BCTRL:
+    '0': -54.9879
+    '1': -55.1254
+    '2': -55.3635
+    '3': -54.5839
+  QUAD:LTUH:680:BCTRL:
+    '0': 41.4462
+    '1': 41.1956
+    '2': 41.7789
+    '3': 41.1875
+  live:
+    '0': 1
+    '1': 1
+    '2': 1
+    '3': 1
+  pulse_intensity_p80:
+    '0': 0.6264976181
+    '1': 0.7551954463
+    '2': 0.6146630931
+    '3': 0.5112584193
+  timestamp:
+    '0': 1782529383.72668
+    '1': 1782529390.901984
+    '2': 1782529398.067963
+    '3': 1782529405.03374
+  xopt_error:
+    '0': false
+    '1': false
+    '2': false
+    '3': false
+  xopt_runtime:
+    '0': 7.1529841642
+    '1': 7.0605185283
+    '2': 7.0531626879
+    '3': 6.8514559651
+description: 'Maximize HXR FEL pulse intensity (p80) using Upper Confidence Bound
+  BO on 4 LTUH matching quads. Hyperparameters: beta=2.0, n_mc=128, n_restarts=20,
+  max_iter=2000. Beam-loss constraint CBLM:UNDH:1375:I1_LOSS > -30 mV (critical/abort).
+  4 initial points (1 current + 3 random at 10% spread). Grounded in 2026-04-04 best
+  UCB run + 2026-06-26 recent runs + knowledge (vetted, xopt/BoTorch defaults). Ranges
+  +/-2.4 from live machine 2026-06-26.'
+environment:
+  beamrate_pv: EVNT:SYS0:1:LCLSBEAMRATE
+  beamsize_monitor_base_pv: null
+  buffer_length_s: 1.0
+  charge_pv: SIOC:SYS0:ML00:CALC252
+  check_fault_timeout: 5.0
+  check_var_timeout: 3.0
+  current_pv: BLEN:LI24:886:BIMAX
+  energy_pv: BEND:DMPH:400:BDES
+  interface:
+    name: epics
+  loss_pv: LBLM:COL0:862:A:I0_LOSSHSTSCS
+  name: lcls
+  pulse_id_pv: PATT:SYS0:1:PULSEID
+  pulse_intensity_pv: GDET:FEE1:361:ENRCHSTCUHBR
+  readonly: false
+  trim_delay: 3.0
+  validate_variable_set: true
+formulas: {}
+generator:
+  beta: 2.0
+  computation_time: null
+  custom_objective: null
+  fixed_features: null
+  gp_constructor:
+    covar_modules: {}
+    custom_noise_prior: null
+    mean_modules: {}
+    name: standard
+    train_config: null
+    train_kwargs: null
+    train_method: lbfgs
+    train_model: true
+    trainable_mean_keys: []
+    transform_inputs: true
+    use_cached_hyperparameters: false
+    use_low_noise_prior: false
+  max_travel_distances: null
+  model: null
+  n_candidates: 1
+  n_interpolate_points: null
+  n_monte_carlo_samples: 128
+  name: upper_confidence_bound
+  numerical_optimizer:
+    discrete_max_batch_size: 2048
+    discrete_max_choices: 4096
+    max_iter: 2000
+    max_time: 5.0
+    mixed_max_discrete_configurations: 512
+    n_restarts: 20
+    name: LBFGS
+  returns_id: false
+  shift: 0.0
+  supports_batch_generation: true
+  supports_constraints: true
+  supports_discrete_variables: true
+  supports_single_objective: true
+  turbo_controller: null
+  use_cuda: false
+  vocs:
+    constants: {}
+    constraints:
+      CBLM:UNDH:1375:I1_LOSS:
+        dtype: null
+        type: GreaterThanConstraint
+        value: -30.0
+    objectives:
+      pulse_intensity_p80:
+        dtype: null
+        type: MaximizeObjective
+    observables: {}
+    variables:
+      QUAD:LTUH:620:BCTRL:
+        default_value: null
+        domain:
+        - -34.128
+        - -29.328
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:640:BCTRL:
+        default_value: null
+        domain:
+        - 34.816
+        - 39.616
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:660:BCTRL:
+        default_value: null
+        domain:
+        - -57.388
+        - -52.588
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:680:BCTRL:
+        default_value: null
+        domain:
+        - 39.046
+        - 43.846
+        dtype: null
+        type: ContinuousVariable
+id: null
+initial_point_actions: null
+initial_points:
+  QUAD:LTUH:620:BCTRL:
+    '0': -31.728
+    '1': -31.5404
+    '2': -31.5357
+    '3': -31.3981
+  QUAD:LTUH:640:BCTRL:
+    '0': 37.2156
+    '1': 37.3842
+    '2': 37.357
+    '3': 36.9532
+  QUAD:LTUH:660:BCTRL:
+    '0': -54.9879
+    '1': -55.1254
+    '2': -55.3635
+    '3': -54.5839
+  QUAD:LTUH:680:BCTRL:
+    '0': 41.4462
+    '1': 41.1956
+    '2': 41.7789
+    '3': 41.1875
+name: ucb_hxr_pulse_intensity_optimized
+observable_formulas: {}
+relative_to_current: false
+script: null
+stopping_condition: null
+tags: null
+vrange_hard_limit: {}
+vrange_limit_options: null
+xopt_version: 3.1.1

@@ -1,0 +1,195 @@
+workflow_timestamp: 1782968373
+task_handlers:
+  optimize_alignment:
+  - step_index: 1
+    step_type: optimize_alignment
+    xopt:
+      generator:
+        returns_id: false
+        supports_single_objective: true
+        vocs:
+          variables:
+            XCOR:IN10:221:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -1.5797919999999967e-05
+              - 0.0007186020799999999
+              type: ContinuousVariable
+            XCOR:IN10:311:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - 0.0003570391000000001
+              - 0.0017292391
+              type: ContinuousVariable
+            XCOR:IN10:381:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -0.0010987046399999999
+              - 0.00105649536
+              type: ContinuousVariable
+            XCOR:IN10:411:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -0.00047369999999999997
+              - 0.0016814999999999998
+              type: ContinuousVariable
+            XCOR:IN10:491:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -0.0017737668000000002
+              - 0.0027442332
+              type: ContinuousVariable
+            XCOR:IN10:521:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -0.0025441252
+              - 0.00017987479999999985
+              type: ContinuousVariable
+            XCOR:IN10:641:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -0.0016125172
+              - 0.0011114827999999998
+              type: ContinuousVariable
+            YCOR:IN10:222:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -5.248478999999998e-05
+              - 0.00068191521
+              type: ContinuousVariable
+            YCOR:IN10:312:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -4.532999999999989e-05
+              - 0.00132687
+              type: ContinuousVariable
+            YCOR:IN10:382:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -0.0019347227
+              - 0.00022047729999999995
+              type: ContinuousVariable
+            YCOR:IN10:412:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -0.00075281384
+              - 0.00140238616
+              type: ContinuousVariable
+            YCOR:IN10:492:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -0.0028614
+              - 0.0016566000000000003
+              type: ContinuousVariable
+            YCOR:IN10:522:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -0.0009281576
+              - 0.0017958423999999999
+              type: ContinuousVariable
+            YCOR:IN10:642:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -0.0030232768
+              - -0.00029927680000000007
+              type: ContinuousVariable
+          objectives:
+            norm:
+              dtype: null
+              type: MinimizeObjective
+          constraints: {}
+          constants: {}
+          observables: {}
+        is_active: false
+        k: 2.0
+        oscillation_size: 0.01
+        decay_rate: 1.0
+      evaluator:
+        function: autonomous_control.facet.alignment_opt_es.optimize_alignment.<locals>.eval
+        max_workers: 1
+        function_kwargs: {}
+        vectorized: false
+      strict: true
+      dump_file: null
+      data:
+        XCOR:IN10:221:BCTRL:
+          '0': 0.0003514021
+        XCOR:IN10:311:BCTRL:
+          '0': 0.0010431391
+        XCOR:IN10:381:BCTRL:
+          '0': -2.11046e-05
+        XCOR:IN10:411:BCTRL:
+          '0': 0.0006039
+        XCOR:IN10:491:BCTRL:
+          '0': 0.0004852332
+        XCOR:IN10:521:BCTRL:
+          '0': -0.0011821252
+        XCOR:IN10:641:BCTRL:
+          '0': -0.0002505172
+        YCOR:IN10:222:BCTRL:
+          '0': 0.0003147152
+        YCOR:IN10:312:BCTRL:
+          '0': 0.00064077
+        YCOR:IN10:382:BCTRL:
+          '0': -0.0008571227
+        YCOR:IN10:412:BCTRL:
+          '0': 0.0003247862
+        YCOR:IN10:492:BCTRL:
+          '0': -0.0006024
+        YCOR:IN10:522:BCTRL:
+          '0': 0.0004338424
+        YCOR:IN10:642:BCTRL:
+          '0': -0.0016612768
+        norm:
+          '0': 0.9407642035
+        transmission:
+          '0': 1.0103804675
+        BPMS:IN10:511:X:
+          '0': 0.2805954218
+        BPMS:IN10:631:Y:
+          '0': 0.2537966669
+        BPMS:IN10:651:Y:
+          '0': 0.4385293126
+        BPMS:IN10:425:Y:
+          '0': -0.206867069
+        BPMS:IN10:651:X:
+          '0': -0.0093100443
+        BPMS:IN10:631:X:
+          '0': -0.2046995461
+        BPMS:IN10:511:Y:
+          '0': -0.0622451454
+        BPMS:IN10:525:Y:
+          '0': -0.0951542929
+        BPMS:IN10:425:X:
+          '0': -0.026181072
+        BPMS:IN10:581:Y:
+          '0': 0.0386999249
+        BPMS:IN10:371:X:
+          '0': -0.6056628823
+        BPMS:IN10:525:X:
+          '0': 0.0732414573
+        BPMS:IN10:371:Y:
+          '0': -0.2775989175
+        BPMS:IN10:581:X:
+          '0': -0.0208637714
+        xopt_runtime:
+          '0': 0.5017343198
+        xopt_error:
+          '0': false
+      serialize_torch: false
+      serialize_inline: false
+      stopping_condition: null

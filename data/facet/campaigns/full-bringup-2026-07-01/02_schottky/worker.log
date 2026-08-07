@@ -1,0 +1,159 @@
+/home/fphysics/zhezhang/AgenticOpt/bax_algorithms/bax_algorithms/solenoid_alignment.py:21: UserWarning: Field name "name" in "PathwiseSolenoidAlignment" shadows an attribute in parent "PathwiseOptimization"
+  class PathwiseSolenoidAlignment(PathwiseOptimization):
+2026-07-01 22:34:42,878 - INFO - Starting automatic workflow...
+2026-07-01 22:34:42,878 - INFO - Workflow context: steps=1 dump_location=. reset_env_after=False logging_level=INFO log_file=automatic_workflow_1782970482.log
+2026-07-01 22:34:42,878 - INFO - Ensured workflow output directory exists: .
+2026-07-01 22:34:42,879 - INFO - Creating new FACET-II badger environment.
+/home/fphysics/zhezhang/AgenticOpt/Badger/src/badger/environment.py:131: UserWarning: Field name "variables" in "Environment" shadows an attribute in parent "BaseAutomaticEmittanceEnvironment"
+  return super().__new__(mcs, name, bases, namespace)
+2026-07-01 22:34:47,445 - INFO - Running workflow step: optimize_schottky
+2026-07-01 22:34:47,445 - INFO - Step 1/1 parameters: {}
+2026-07-01 22:34:48,127 - INFO - Starting auto_schottky_scan.
+2026-07-01 22:34:48,128 - INFO - inserting Faraday cup, interrupting feedbacks
+2026-07-01 22:34:58,262 - INFO - Initialized generator annotation=NoneType required=True description='generator name'
+Available rounds: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Design range: [-25.0, 45.0]°
+2026-07-01 22:34:58,267 - INFO - Created Schottky Xopt object.
+2026-07-01 22:34:58,267 - INFO - Starting automatic Schottky scan with Amortized BOED generator.
+2026-07-01 22:34:58,267 - INFO - Running 100 steps (10 grid + 90 BOED)...
+2026-07-01 22:34:58,267 - INFO - Running Xopt step
+2026-07-01 22:35:00,798 - INFO - Running Xopt step
+2026-07-01 22:35:03,308 - INFO - Running Xopt step
+2026-07-01 22:35:05,818 - INFO - Running Xopt step
+2026-07-01 22:35:08,328 - INFO - Running Xopt step
+2026-07-01 22:35:10,837 - INFO - Running Xopt step
+2026-07-01 22:35:13,362 - INFO - Running Xopt step
+2026-07-01 22:35:15,871 - INFO - Running Xopt step
+2026-07-01 22:35:18,381 - INFO - Running Xopt step
+2026-07-01 22:35:20,891 - INFO - Running Xopt step
+2026-07-01 22:35:23,401 - INFO - BOED step 0 / 90
+2026-07-01 22:35:23,401 - INFO - Running Xopt step
+Normalization auto-fitted: y_min=0.0062  y_max=2.4678
+  → round 00 model active at n_obs=10
+2026-07-01 22:35:26,045 - INFO - Running Xopt step
+2026-07-01 22:35:28,562 - INFO - Running Xopt step
+2026-07-01 22:35:31,072 - INFO - Running Xopt step
+2026-07-01 22:35:33,581 - INFO - Running Xopt step
+2026-07-01 22:35:36,092 - INFO - BOED step 5 / 90
+2026-07-01 22:35:36,092 - INFO - Running Xopt step
+2026-07-01 22:35:38,602 - INFO - Running Xopt step
+2026-07-01 22:35:41,113 - INFO - Running Xopt step
+2026-07-01 22:35:43,625 - INFO - Running Xopt step
+2026-07-01 22:35:46,135 - INFO - Running Xopt step
+2026-07-01 22:35:48,647 - INFO - BOED step 10 / 90
+2026-07-01 22:35:48,647 - INFO - Running Xopt step
+  → round 01 model active at n_obs=20
+2026-07-01 22:35:51,177 - INFO - Running Xopt step
+2026-07-01 22:35:53,694 - INFO - Running Xopt step
+2026-07-01 22:35:56,205 - INFO - Running Xopt step
+2026-07-01 22:35:58,716 - INFO - Running Xopt step
+2026-07-01 22:36:01,227 - INFO - BOED step 15 / 90
+2026-07-01 22:36:01,227 - INFO - Running Xopt step
+2026-07-01 22:36:03,737 - INFO - Running Xopt step
+2026-07-01 22:36:06,248 - INFO - Running Xopt step
+2026-07-01 22:36:08,757 - INFO - Running Xopt step
+2026-07-01 22:36:11,267 - INFO - Running Xopt step
+2026-07-01 22:36:13,778 - INFO - BOED step 20 / 90
+2026-07-01 22:36:13,778 - INFO - Running Xopt step
+  → round 02 model active at n_obs=30
+2026-07-01 22:36:16,311 - INFO - Running Xopt step
+2026-07-01 22:36:18,829 - INFO - Running Xopt step
+2026-07-01 22:36:21,341 - INFO - Running Xopt step
+2026-07-01 22:36:23,851 - INFO - Running Xopt step
+2026-07-01 22:36:26,361 - INFO - BOED step 25 / 90
+2026-07-01 22:36:26,361 - INFO - Running Xopt step
+2026-07-01 22:36:28,871 - INFO - Running Xopt step
+2026-07-01 22:36:31,381 - INFO - Running Xopt step
+2026-07-01 22:36:33,892 - INFO - Running Xopt step
+2026-07-01 22:36:36,404 - INFO - Running Xopt step
+2026-07-01 22:36:38,916 - INFO - BOED step 30 / 90
+2026-07-01 22:36:38,916 - INFO - Running Xopt step
+  → round 03 model active at n_obs=40
+2026-07-01 22:36:41,445 - INFO - Running Xopt step
+2026-07-01 22:36:43,963 - INFO - Running Xopt step
+2026-07-01 22:36:46,474 - INFO - Running Xopt step
+2026-07-01 22:36:48,986 - INFO - Running Xopt step
+2026-07-01 22:36:51,498 - INFO - BOED step 35 / 90
+2026-07-01 22:36:51,498 - INFO - Running Xopt step
+2026-07-01 22:36:54,010 - INFO - Running Xopt step
+2026-07-01 22:36:56,521 - INFO - Running Xopt step
+2026-07-01 22:36:59,032 - INFO - Running Xopt step
+2026-07-01 22:37:01,543 - INFO - Running Xopt step
+2026-07-01 22:37:04,054 - INFO - BOED step 40 / 90
+2026-07-01 22:37:04,054 - INFO - Running Xopt step
+  → round 04 model active at n_obs=50
+2026-07-01 22:37:06,588 - INFO - Running Xopt step
+2026-07-01 22:37:09,108 - INFO - Running Xopt step
+2026-07-01 22:37:11,618 - INFO - Running Xopt step
+2026-07-01 22:37:14,127 - INFO - Running Xopt step
+2026-07-01 22:37:16,637 - INFO - BOED step 45 / 90
+2026-07-01 22:37:16,637 - INFO - Running Xopt step
+2026-07-01 22:37:19,146 - INFO - Running Xopt step
+2026-07-01 22:37:21,656 - INFO - Running Xopt step
+2026-07-01 22:37:24,166 - INFO - Running Xopt step
+2026-07-01 22:37:26,677 - INFO - Running Xopt step
+2026-07-01 22:37:29,189 - INFO - BOED step 50 / 90
+2026-07-01 22:37:29,189 - INFO - Running Xopt step
+  → round 05 model active at n_obs=60
+2026-07-01 22:37:31,721 - INFO - Running Xopt step
+2026-07-01 22:37:34,239 - INFO - Running Xopt step
+2026-07-01 22:37:36,755 - INFO - Running Xopt step
+2026-07-01 22:37:39,265 - INFO - Running Xopt step
+2026-07-01 22:37:41,777 - INFO - BOED step 55 / 90
+2026-07-01 22:37:41,777 - INFO - Running Xopt step
+2026-07-01 22:37:44,288 - INFO - Running Xopt step
+2026-07-01 22:37:46,799 - INFO - Running Xopt step
+2026-07-01 22:37:49,310 - INFO - Running Xopt step
+2026-07-01 22:37:51,819 - INFO - Running Xopt step
+2026-07-01 22:37:54,330 - INFO - BOED step 60 / 90
+2026-07-01 22:37:54,331 - INFO - Running Xopt step
+  → round 06 model active at n_obs=70
+2026-07-01 22:37:56,862 - INFO - Running Xopt step
+2026-07-01 22:37:59,385 - INFO - Running Xopt step
+2026-07-01 22:38:01,897 - INFO - Running Xopt step
+2026-07-01 22:38:04,409 - INFO - Running Xopt step
+2026-07-01 22:38:06,919 - INFO - BOED step 65 / 90
+2026-07-01 22:38:06,919 - INFO - Running Xopt step
+2026-07-01 22:38:09,431 - INFO - Running Xopt step
+2026-07-01 22:38:11,941 - INFO - Running Xopt step
+2026-07-01 22:38:14,452 - INFO - Running Xopt step
+2026-07-01 22:38:16,963 - INFO - Running Xopt step
+2026-07-01 22:38:19,475 - INFO - BOED step 70 / 90
+2026-07-01 22:38:19,475 - INFO - Running Xopt step
+  → round 07 model active at n_obs=80
+2026-07-01 22:38:22,012 - INFO - Running Xopt step
+2026-07-01 22:38:24,531 - INFO - Running Xopt step
+2026-07-01 22:38:27,042 - INFO - Running Xopt step
+2026-07-01 22:38:29,553 - INFO - Running Xopt step
+2026-07-01 22:38:32,065 - INFO - BOED step 75 / 90
+2026-07-01 22:38:32,065 - INFO - Running Xopt step
+2026-07-01 22:38:34,576 - INFO - Running Xopt step
+2026-07-01 22:38:37,086 - INFO - Running Xopt step
+2026-07-01 22:38:39,597 - INFO - Running Xopt step
+2026-07-01 22:38:42,106 - INFO - Running Xopt step
+2026-07-01 22:38:44,616 - INFO - BOED step 80 / 90
+2026-07-01 22:38:44,616 - INFO - Running Xopt step
+  → round 08 model active at n_obs=90
+2026-07-01 22:38:47,143 - INFO - Running Xopt step
+2026-07-01 22:38:49,662 - INFO - Running Xopt step
+2026-07-01 22:38:52,175 - INFO - Running Xopt step
+2026-07-01 22:38:54,686 - INFO - Running Xopt step
+2026-07-01 22:38:57,199 - INFO - BOED step 85 / 90
+2026-07-01 22:38:57,199 - INFO - Running Xopt step
+2026-07-01 22:38:59,712 - INFO - Running Xopt step
+2026-07-01 22:39:02,224 - INFO - Running Xopt step
+2026-07-01 22:39:04,734 - INFO - Running Xopt step
+2026-07-01 22:39:07,244 - INFO - Running Xopt step
+2026-07-01 22:39:09,754 - INFO - BOED step 90 / 90
+2026-07-01 22:39:11,771 - INFO - best T0 estimate from BOED scan: 0.04° gunphase
+2026-07-01 22:39:11,771 - INFO - removing the faraday cup and restarting feedbacks
+2026-07-01 22:39:11,772 - INFO - Automatic Schottky scan complete.
+/home/fphysics/zhezhang/AgenticOpt/.venv/lib/python3.11/site-packages/pydantic/main.py:475: UserWarning: Pydantic serializer warnings:
+  PydanticSerializationUnexpectedValue(Unexpected field `_round_to_path`: Expected `AmortizedBOEDBunchGenerator`)
+  PydanticSerializationUnexpectedValue(Unexpected field `_round_to_path`: Expected `AmortizedBOEDBunchGenerator`)
+  return self.__pydantic_serializer__.to_python(
+2026-07-01 22:39:11,803 - INFO - Appended Xopt serialization for optimize_schottky to ./automatic_workflow_xopt_1782970482.yaml
+2026-07-01 22:39:11,803 - INFO - Completed workflow step: optimize_schottky (step 1/1) in 264.36 s
+2026-07-01 22:39:11,803 - INFO - Skipping post-workflow environment reset (reset_env_after=False).
+2026-07-01 22:39:11,803 - INFO - Automatic workflow completed.
+2026-07-01 22:39:11,803 - INFO - Workflow summary: completed_steps=1 total_steps=1 duration=268.93 s xopt_dump_file=./automatic_workflow_xopt_1782970482.yaml

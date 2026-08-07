@@ -1,0 +1,303 @@
+additional_variables: []
+badger_version: 1.5.5.dev45+gf333a632c.d20260626
+constraint_formulas:
+  CBLM:UNDH:1375:I1_LOSS:
+    formula: ''
+    variable_mapping: {}
+creation_ts: 2026-06-26-195807
+critical_constraint_names: []
+data:
+  CBLM:UNDH:1375:I1_LOSS:
+    '0': -0.5283
+    '1': 0.0
+    '10': -0.45786
+    '2': -0.73962
+    '3': -0.42264
+    '4': -0.56352
+    '5': -1.37358
+    '6': -2.6415
+    '7': -0.8805
+    '8': -1.79622
+    '9': -0.14088
+  QUAD:LTUH:620:BCTRL:
+    '0': -31.728
+    '1': -31.6802
+    '10': -34.12803
+    '2': -32.0569
+    '3': -31.8543
+    '4': -30.5468446158
+    '5': -32.2709643549
+    '6': -33.4139012007
+    '7': -32.6476872416
+    '8': -34.007272734
+    '9': -34.12803
+  QUAD:LTUH:640:BCTRL:
+    '0': 37.2156
+    '1': 37.6045
+    '10': 39.61559
+    '2': 37.5095
+    '3': 36.9303
+    '4': 35.8476357235
+    '5': 35.9282224044
+    '6': 35.1367327632
+    '7': 37.8622136569
+    '8': 39.1468937087
+    '9': 39.61559
+  QUAD:LTUH:660:BCTRL:
+    '0': -54.9879
+    '1': -54.6656
+    '10': -57.38786
+    '2': -54.6982
+    '3': -55.4126
+    '4': -56.3431191674
+    '5': -57.3299782691
+    '6': -57.38786
+    '7': -57.38786
+    '8': -57.38786
+    '9': -57.38786
+  QUAD:LTUH:680:BCTRL:
+    '0': 41.4462
+    '1': 41.9091
+    '10': 43.7349026598
+    '2': 41.694
+    '3': 41.0276
+    '4': 40.1813401295
+    '5': 39.4544404717
+    '6': 39.04619
+    '7': 39.04619
+    '8': 39.04619
+    '9': 40.8205435258
+  live:
+    '0': 1
+    '1': 1
+    '10': 1
+    '2': 1
+    '3': 1
+    '4': 1
+    '5': 1
+    '6': 1
+    '7': 1
+    '8': 1
+    '9': 1
+  pulse_intensity_p80:
+    '0': 0.6683547577
+    '1': 0.5463567514
+    '10': 1.212340277
+    '2': 0.4614544088
+    '3': 0.6300391887
+    '4': 0.6829569069
+    '5': 0.9370295352
+    '6': 0.8194963368
+    '7': 1.0931041529
+    '8': 1.2432812569
+    '9': 1.4444779267
+  timestamp:
+    '0': 1782529091.477067
+    '1': 1782529095.639375
+    '10': 1782529140.034032
+    '2': 1782529099.800284
+    '3': 1782529103.941899
+    '4': 1782529110.225647
+    '5': 1782529116.061788
+    '6': 1782529121.075539
+    '7': 1782529126.450299
+    '8': 1782529131.53004
+    '9': 1782529135.982985
+  xopt_error:
+    '0': false
+    '1': false
+    '10': false
+    '2': false
+    '3': false
+    '4': false
+    '5': false
+    '6': false
+    '7': false
+    '8': false
+    '9': false
+  xopt_runtime:
+    '0': 4.1218529963
+    '1': 4.0496473098
+    '10': 3.1136538829
+    '2': 4.0488926088
+    '3': 4.0291783633
+    '4': 4.0227746959
+    '5': 3.445030815
+    '6': 4.0255090068
+    '7': 4.0288224011
+    '8': 4.040152323
+    '9': 3.4180055601
+description: Template LTUH matching quads
+environment:
+  beamrate_pv: EVNT:SYS0:1:LCLSBEAMRATE
+  beamsize_monitor_base_pv: null
+  buffer_length_s: 1.0
+  charge_pv: SIOC:SYS0:ML00:CALC252
+  check_fault_timeout: 5.0
+  check_var_timeout: 1.0
+  current_pv: BLEN:LI24:886:BIMAX
+  energy_pv: BEND:DMPH:400:BDES
+  interface:
+    name: epics
+  loss_pv: CBLM:UNDH:1375:I1_LOSSHSTBR
+  name: lcls
+  pulse_id_pv: PATT:SYS0:1:PULSEID
+  pulse_intensity_pv: GDET:FEE1:361:ENRCHSTCUHBR
+  readonly: false
+  trim_delay: 2.0
+  validate_variable_set: true
+formulas: {}
+generator:
+  beta: 2.0
+  computation_time:
+    acquisition_optimization:
+      '0': 1.3926585931
+      '1': 1.934279257
+      '2': 0.7796440162
+      '3': 1.0125536053
+      '4': 0.7719253059
+      '5': 0.6946286741
+      '6': 0.6922099101
+    training:
+      '0': 0.7519017663
+      '1': 0.1306373081
+      '2': 0.1642195922
+      '3': 0.2894253437
+      '4': 0.2248567301
+      '5': 0.2960638972
+      '6': 0.1994041093
+  custom_objective: null
+  fixed_features: null
+  gp_constructor:
+    covar_modules: {}
+    custom_noise_prior: null
+    mean_modules: {}
+    name: standard
+    train_config: null
+    train_kwargs: null
+    train_method: lbfgs
+    train_model: true
+    trainable_mean_keys: []
+    transform_inputs: true
+    use_cached_hyperparameters: false
+    use_low_noise_prior: false
+  max_travel_distances: null
+  n_candidates: 1
+  n_interpolate_points: null
+  n_monte_carlo_samples: 128
+  name: upper_confidence_bound
+  numerical_optimizer:
+    discrete_max_batch_size: 2048
+    discrete_max_choices: 4096
+    max_iter: 2000
+    max_time: 5.0
+    mixed_max_discrete_configurations: 512
+    n_restarts: 20
+    name: LBFGS
+  returns_id: false
+  shift: 0.0
+  supports_batch_generation: true
+  supports_constraints: true
+  supports_discrete_variables: true
+  supports_single_objective: true
+  turbo_controller: null
+  use_cuda: false
+  vocs:
+    constants: {}
+    constraints:
+      CBLM:UNDH:1375:I1_LOSS:
+        dtype: null
+        type: GreaterThanConstraint
+        value: -30.0
+    objectives:
+      pulse_intensity_p80:
+        dtype: null
+        type: MaximizeObjective
+    observables: {}
+    variables:
+      QUAD:LTUH:620:BCTRL:
+        default_value: null
+        domain:
+        - -34.12803
+        - -29.328030000000002
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:640:BCTRL:
+        default_value: null
+        domain:
+        - 34.81559
+        - 39.61559
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:660:BCTRL:
+        default_value: null
+        domain:
+        - -57.387859999999996
+        - -52.58786
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:680:BCTRL:
+        default_value: null
+        domain:
+        - 39.04619
+        - 43.84619
+        dtype: null
+        type: ContinuousVariable
+id: null
+initial_point_actions:
+- type: add_curr
+- config:
+    fraction: 0.1
+    method: 0
+    n_points: 3
+  type: add_rand
+initial_points:
+  QUAD:LTUH:620:BCTRL:
+    '0': -31.728
+    '1': -31.6802
+    '2': -32.0569
+    '3': -31.8543
+  QUAD:LTUH:640:BCTRL:
+    '0': 37.2156
+    '1': 37.6045
+    '2': 37.5095
+    '3': 36.9303
+  QUAD:LTUH:660:BCTRL:
+    '0': -54.9879
+    '1': -54.6656
+    '2': -54.6982
+    '3': -55.4126
+  QUAD:LTUH:680:BCTRL:
+    '0': 41.4462
+    '1': 41.9091
+    '2': 41.694
+    '3': 41.0276
+name: LTUH matching quads
+observable_formulas: {}
+relative_to_current: true
+script: null
+stopping_condition: null
+tags: null
+vrange_hard_limit: {}
+vrange_limit_options:
+  QUAD:LTUH:620:BCTRL:
+    delta: 2.4
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:640:BCTRL:
+    delta: 2.4
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:660:BCTRL:
+    delta: 2.4
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:680:BCTRL:
+    delta: 2.4
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+xopt_version: 3.1.1

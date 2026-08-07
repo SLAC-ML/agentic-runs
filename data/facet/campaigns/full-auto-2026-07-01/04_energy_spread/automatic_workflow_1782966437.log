@@ -1,0 +1,24 @@
+2026-07-01 21:27:17,780 - INFO - Starting automatic workflow...
+2026-07-01 21:27:17,780 - INFO - Workflow context: steps=1 dump_location=. reset_env_after=False logging_level=INFO log_file=automatic_workflow_1782966437.log
+2026-07-01 21:27:17,781 - INFO - Ensured workflow output directory exists: .
+2026-07-01 21:27:17,781 - INFO - Creating new FACET-II badger environment.
+2026-07-01 21:27:21,208 - INFO - Running workflow step: minimize_energy_spread
+2026-07-01 21:27:21,209 - INFO - Step 1/1 parameters: {}
+2026-07-01 21:27:21,945 - INFO - Starting e_spread_opt.
+2026-07-01 21:27:21,973 - INFO - Starting energy spread optimization.
+2026-07-01 21:27:26,550 - INFO - Initialized generator expected_improvement
+2026-07-01 21:27:26,551 - INFO - Running initial random evaluations.
+2026-07-01 21:27:52,973 - INFO - Running Xopt step
+2026-07-01 21:28:03,171 - INFO - Running Xopt step
+2026-07-01 21:28:11,862 - INFO - Running Xopt step
+2026-07-01 21:28:23,495 - INFO - Running Xopt step
+2026-07-01 21:28:33,648 - INFO - Running Xopt step
+2026-07-01 21:28:39,082 - INFO - Optimization loop complete.
+2026-07-01 21:28:39,085 - INFO - Evaluating best point during energy spread optimization.
+2026-07-01 21:28:41,519 - INFO - Best point evaluated during energy spread optimization.
+2026-07-01 21:28:41,520 - INFO - Energy spread optimization finished.
+2026-07-01 21:28:41,531 - INFO - Appended Xopt serialization for minimize_energy_spread to ./automatic_workflow_xopt_1782966437.yaml
+2026-07-01 21:28:41,531 - INFO - Completed workflow step: minimize_energy_spread (step 1/1) in 80.32 s
+2026-07-01 21:28:41,531 - INFO - Skipping post-workflow environment reset (reset_env_after=False).
+2026-07-01 21:28:41,531 - INFO - Automatic workflow completed.
+2026-07-01 21:28:41,531 - INFO - Workflow summary: completed_steps=1 total_steps=1 duration=83.75 s xopt_dump_file=./automatic_workflow_xopt_1782966437.yaml

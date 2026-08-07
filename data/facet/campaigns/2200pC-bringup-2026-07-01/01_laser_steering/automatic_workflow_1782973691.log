@@ -1,0 +1,39 @@
+2026-07-01 23:28:11,212 - INFO - Starting automatic workflow...
+2026-07-01 23:28:11,212 - INFO - Workflow context: steps=1 dump_location=. reset_env_after=False logging_level=INFO log_file=automatic_workflow_1782973691.log
+2026-07-01 23:28:11,213 - INFO - Ensured workflow output directory exists: .
+2026-07-01 23:28:11,213 - INFO - Creating new FACET-II badger environment.
+2026-07-01 23:28:15,716 - INFO - Running workflow step: optimize_laser_steering
+2026-07-01 23:28:15,716 - INFO - Step 1/1 parameters: {'initial_random_evaluations': 10, 'n_steps': 20}
+2026-07-01 23:28:15,716 - INFO - Starting BAX solenoid alignment optimization.
+2026-07-01 23:28:15,716 - INFO - Solenoid alignment config: initial_random_evaluations=10 n_steps=20 dump_location=None
+2026-07-01 23:28:15,809 - INFO - Initialized generator bax
+2026-07-01 23:28:15,815 - INFO - Running initial evaluations (current + 10 random points).
+2026-07-01 23:28:37,923 - INFO - Running Xopt step
+2026-07-01 23:28:42,340 - INFO - Running Xopt step
+2026-07-01 23:28:46,865 - INFO - Running Xopt step
+2026-07-01 23:28:51,710 - INFO - Running Xopt step
+2026-07-01 23:28:56,425 - INFO - Running Xopt step
+2026-07-01 23:29:01,155 - INFO - Running Xopt step
+2026-07-01 23:29:05,398 - INFO - Running Xopt step
+2026-07-01 23:29:09,944 - INFO - Running Xopt step
+2026-07-01 23:29:14,313 - INFO - Running Xopt step
+2026-07-01 23:29:19,103 - INFO - Running Xopt step
+2026-07-01 23:29:23,490 - INFO - Running Xopt step
+2026-07-01 23:29:27,947 - INFO - Running Xopt step
+2026-07-01 23:29:32,470 - INFO - Running Xopt step
+2026-07-01 23:29:36,844 - INFO - Running Xopt step
+2026-07-01 23:29:41,180 - INFO - Running Xopt step
+2026-07-01 23:29:45,574 - INFO - Running Xopt step
+2026-07-01 23:29:50,018 - INFO - Running Xopt step
+2026-07-01 23:29:54,452 - INFO - Running Xopt step
+2026-07-01 23:29:58,890 - INFO - Running Xopt step
+2026-07-01 23:30:03,049 - INFO - Running Xopt step
+2026-07-01 23:30:08,636 - INFO - Evaluating best point during solenoid alignment optimization.
+2026-07-01 23:30:10,643 - INFO - Best point evaluated during solenoid alignment optimization.
+2026-07-01 23:30:10,643 - INFO - Completed solenoid alignment optimization.
+2026-07-01 23:30:12,407 - INFO - Solenoid alignment summary: evaluations=32 dump_file=None png=./solenoid_alignment_opt_1782973695.png duration=116.69 s
+2026-07-01 23:30:12,430 - INFO - Appended Xopt serialization for optimize_laser_steering to ./automatic_workflow_xopt_1782973691.yaml
+2026-07-01 23:30:12,430 - INFO - Completed workflow step: optimize_laser_steering (step 1/1) in 116.71 s
+2026-07-01 23:30:12,430 - INFO - Skipping post-workflow environment reset (reset_env_after=False).
+2026-07-01 23:30:12,430 - INFO - Automatic workflow completed.
+2026-07-01 23:30:12,430 - INFO - Workflow summary: completed_steps=1 total_steps=1 duration=121.22 s xopt_dump_file=./automatic_workflow_xopt_1782973691.yaml

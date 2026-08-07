@@ -1,0 +1,37 @@
+2026-07-01 15:29:30,061 - INFO - Starting automatic workflow...
+2026-07-01 15:29:30,061 - INFO - Workflow context: steps=1 dump_location=. reset_env_after=False logging_level=INFO log_file=automatic_workflow_1782944970.log
+2026-07-01 15:29:30,062 - INFO - Ensured workflow output directory exists: .
+2026-07-01 15:29:30,062 - INFO - Creating new FACET-II badger environment.
+2026-07-01 15:29:34,885 - INFO - Running workflow step: measure_emittance
+2026-07-01 15:29:34,885 - INFO - Step 1/1 parameters: {'screen_name': 'PR10571', 'screen_settle_time': 2}
+2026-07-01 15:29:35,567 - INFO - Starting auto_emittance.
+2026-07-01 15:29:35,567 - INFO - Starting automatic emittance measurement on screen: PR10571
+2026-07-01 15:29:35,597 - INFO - Waiting for 2 seconds for screen to settle...
+2026-07-01 15:29:37,597 - INFO - Configured environment for PR10571
+2026-07-01 15:29:45,392 - INFO - Initialized generator upper_confidence_bound
+2026-07-01 15:29:55,131 - INFO - Running x scans
+2026-07-01 15:29:55,131 - INFO - Iteration 0 for dimension x
+2026-07-01 15:29:55,132 - INFO - Running Xopt step
+2026-07-01 15:30:05,129 - INFO - Iteration 1 for dimension x
+2026-07-01 15:30:05,129 - INFO - Running Xopt step
+2026-07-01 15:30:15,458 - INFO - Iteration 2 for dimension x
+2026-07-01 15:30:15,459 - INFO - Running Xopt step
+2026-07-01 15:30:25,706 - INFO - Iteration 3 for dimension x
+2026-07-01 15:30:25,707 - INFO - Running Xopt step
+2026-07-01 15:30:36,075 - INFO - Iteration 4 for dimension x
+2026-07-01 15:30:36,076 - INFO - Running Xopt step
+2026-07-01 15:30:46,129 - INFO - Running y scans
+2026-07-01 15:30:46,130 - INFO - Iteration 0 for dimension y
+2026-07-01 15:30:46,130 - INFO - Running Xopt step
+2026-07-01 15:30:56,556 - INFO - Iteration 1 for dimension y
+2026-07-01 15:30:56,557 - INFO - Running Xopt step
+2026-07-01 15:31:06,695 - INFO - Iteration 2 for dimension y
+2026-07-01 15:31:06,695 - INFO - Running Xopt step
+2026-07-01 15:31:17,718 - INFO - saving image to ./emittance_visualization_1782944985.jpeg
+2026-07-01 15:31:17,851 - INFO - saving data to ./emittance_scan_1782944985.h5
+2026-07-01 15:31:22,807 - INFO - Emittance measurement complete. Results saved to: ./emittance_scan_1782944985.h5
+2026-07-01 15:31:22,880 - INFO - Appended Xopt serialization for measure_emittance to ./automatic_workflow_xopt_1782944970.yaml
+2026-07-01 15:31:22,880 - INFO - Completed workflow step: measure_emittance (step 1/1) in 107.99 s
+2026-07-01 15:31:22,880 - INFO - Skipping post-workflow environment reset (reset_env_after=False).
+2026-07-01 15:31:22,880 - INFO - Automatic workflow completed.
+2026-07-01 15:31:22,880 - INFO - Workflow summary: completed_steps=1 total_steps=1 duration=112.82 s xopt_dump_file=./automatic_workflow_xopt_1782944970.yaml

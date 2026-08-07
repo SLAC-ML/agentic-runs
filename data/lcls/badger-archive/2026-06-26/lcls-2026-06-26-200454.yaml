@@ -1,0 +1,195 @@
+additional_variables: []
+badger_version: 0.0.0
+constraint_formulas:
+  CBLM:UNDH:1375:I1_LOSS:
+    formula: ''
+    variable_mapping: {}
+creation_ts: 2026-06-26-200454
+critical_constraint_names:
+- CBLM:UNDH:1375:I1_LOSS
+data:
+  CBLM:UNDH:1375:I1_LOSS:
+    '0': -0.14088
+    '1': -0.3522
+  QUAD:LTUH:620:BCTRL:
+    '0': -31.728
+    '1': -31.6802
+  QUAD:LTUH:640:BCTRL:
+    '0': 37.2156
+    '1': 37.6045
+  QUAD:LTUH:660:BCTRL:
+    '0': -54.9879
+    '1': -54.6656
+  QUAD:LTUH:680:BCTRL:
+    '0': 41.4462
+    '1': 41.9091
+  live:
+    '0': 1
+    '1': 1
+  pulse_intensity_p80:
+    '0': 0.6696898501
+    '1': 0.5275668002
+  timestamp:
+    '0': 1782529499.419548
+    '1': 1782529503.55776
+  xopt_error:
+    '0': false
+    '1': false
+  xopt_runtime:
+    '0': 4.1447376823
+    '1': 4.0237954482
+description: Template LTUH matching quads
+environment:
+  beamrate_pv: EVNT:SYS0:1:LCLSBEAMRATE
+  beamsize_monitor_base_pv: 'null'
+  buffer_length_s: 1.0
+  charge_pv: SIOC:SYS0:ML00:CALC252
+  check_fault_timeout: 5.0
+  check_var_timeout: 1.0
+  current_pv: BLEN:LI24:886:BIMAX
+  energy_pv: BEND:DMPH:400:BDES
+  interface:
+    name: epics
+  loss_pv: CBLM:UNDH:1375:I1_LOSSHSTBR
+  name: lcls
+  pulse_id_pv: PATT:SYS0:1:PULSEID
+  pulse_intensity_pv: GDET:FEE1:361:ENRCHSTCUHBR
+  readonly: false
+  trim_delay: 2.0
+  validate_variable_set: true
+formulas: {}
+generator:
+  beta: 2.0
+  computation_time: null
+  custom_objective: null
+  fixed_features: null
+  gp_constructor:
+    covar_modules: {}
+    custom_noise_prior: null
+    mean_modules: {}
+    name: standard
+    train_config: null
+    train_kwargs: null
+    train_method: lbfgs
+    train_model: true
+    trainable_mean_keys: []
+    transform_inputs: true
+    use_cached_hyperparameters: false
+    use_low_noise_prior: false
+  max_travel_distances: null
+  model: null
+  n_candidates: 1
+  n_interpolate_points: null
+  n_monte_carlo_samples: 128
+  name: upper_confidence_bound
+  numerical_optimizer:
+    max_iter: 2000
+    max_time: 5.0
+    n_restarts: 20
+    name: LBFGS
+  returns_id: false
+  shift: 0.0
+  supports_batch_generation: true
+  supports_constraints: true
+  supports_single_objective: true
+  turbo_controller: null
+  use_cuda: false
+  vocs:
+    constants: {}
+    constraints:
+      CBLM:UNDH:1375:I1_LOSS:
+        dtype: null
+        type: GreaterThanConstraint
+        value: -30.0
+    objectives:
+      pulse_intensity_p80:
+        dtype: null
+        type: MaximizeObjective
+    observables: {}
+    variables:
+      QUAD:LTUH:620:BCTRL:
+        default_value: null
+        domain:
+        - -34.12803
+        - -29.328030000000002
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:640:BCTRL:
+        default_value: null
+        domain:
+        - 34.81559
+        - 39.61559
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:660:BCTRL:
+        default_value: null
+        domain:
+        - -57.387859999999996
+        - -52.58786
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:680:BCTRL:
+        default_value: null
+        domain:
+        - 39.04619
+        - 43.84619
+        dtype: null
+        type: ContinuousVariable
+id: null
+initial_point_actions:
+- type: add_curr
+- config:
+    fraction: 0.1
+    method: 0
+    n_points: 3
+  type: add_rand
+initial_points:
+  QUAD:LTUH:620:BCTRL:
+    '0': -31.728
+    '1': -31.6802
+    '2': -32.0569
+    '3': -31.8543
+  QUAD:LTUH:640:BCTRL:
+    '0': 37.2156
+    '1': 37.6045
+    '2': 37.5095
+    '3': 36.9303
+  QUAD:LTUH:660:BCTRL:
+    '0': -54.9879
+    '1': -54.6656
+    '2': -54.6982
+    '3': -55.4126
+  QUAD:LTUH:680:BCTRL:
+    '0': 41.4462
+    '1': 41.9091
+    '2': 41.694
+    '3': 41.0276
+name: LTUH matching quads
+observable_formulas: {}
+relative_to_current: true
+script: null
+stopping_condition: null
+tags: null
+vrange_hard_limit: {}
+vrange_limit_options:
+  QUAD:LTUH:620:BCTRL:
+    delta: 2.4
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:640:BCTRL:
+    delta: 2.4
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:660:BCTRL:
+    delta: 2.4
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:680:BCTRL:
+    delta: 2.4
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+xopt_version: 3.0.1

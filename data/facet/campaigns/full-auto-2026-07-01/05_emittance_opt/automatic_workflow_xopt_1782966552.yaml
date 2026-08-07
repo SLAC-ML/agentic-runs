@@ -1,0 +1,247 @@
+workflow_timestamp: 1782966552
+task_handlers:
+  minimize_injector_emittance:
+  - step_index: 1
+    step_type: minimize_injector_emittance
+    xopt:
+      generator:
+        returns_id: false
+        supports_batch_generation: true
+        supports_single_objective: true
+        supports_constraints: true
+        supports_discrete_variables: true
+        vocs:
+          variables:
+            QUAD:IN10:121:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -0.008
+              - 0.008
+              type: ContinuousVariable
+            QUAD:IN10:122:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -0.008
+              - 0.008
+              type: ContinuousVariable
+            SOLN:IN10:121:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - 0.39
+              - 0.41
+              type: ContinuousVariable
+          objectives:
+            emittance_mean:
+              dtype: null
+              type: MinimizeObjective
+          constraints:
+            min_joint_bmag:
+              dtype: null
+              value: 1.5
+              type: LessThanConstraint
+          constants: {}
+          observables: {}
+        n_monte_carlo_samples: 128
+        turbo_controller: null
+        use_cuda: false
+        gp_constructor:
+          name: standard
+          use_low_noise_prior: false
+          covar_modules: {}
+          mean_modules: {}
+          trainable_mean_keys: []
+          transform_inputs: true
+          custom_noise_prior: null
+          use_cached_hyperparameters: false
+          train_method: lbfgs
+          train_model: true
+          train_config: null
+          train_kwargs: null
+        numerical_optimizer:
+          name: LBFGS
+          n_restarts: 20
+          max_iter: 1000
+          max_time: 5.0
+          mixed_max_discrete_configurations: 512
+          discrete_max_choices: 4096
+          discrete_max_batch_size: 2048
+        max_travel_distances: null
+        fixed_features: null
+        computation_time:
+          training:
+            '0': 0.1896318481
+            '1': 0.2373316209
+            '2': 0.284308491
+          acquisition_optimization:
+            '0': 4.041898618
+            '1': 0.133023194
+            '2': 0.1552036921
+        custom_objective: null
+        n_interpolate_points: null
+        n_candidates: 1
+      evaluator:
+        function: autonomous_control.facet.emittance_opt.minimize_injector_emittance.<locals>.evaluate
+        max_workers: 1
+        function_kwargs: {}
+        vectorized: false
+      strict: true
+      dump_file: null
+      data:
+        QUAD:IN10:121:BCTRL:
+          '0': -0.0021715671
+          '1': 0.0066680262
+          '2': 0.0034917307
+          '3': -0.0052360763
+          '4': 0.008
+          '5': -0.008
+          '6': -0.0021715671
+        QUAD:IN10:122:BCTRL:
+          '0': -0.0041052095
+          '1': 0.0002871869
+          '2': 0.0064256147
+          '3': -0.0042989658
+          '4': -0.008
+          '5': 0.008
+          '6': -0.0041052095
+        SOLN:IN10:121:BCTRL:
+          '0': 0.3916306179
+          '1': 0.3927032822
+          '2': 0.4070939487
+          '3': 0.3915720717
+          '4': 0.39
+          '5': 0.3902271251
+          '6': 0.3916306179
+        save_filename:
+          '0': ./emittance_scan_1782966564.h5
+          '1': ./emittance_scan_1782966630.h5
+          '2': ./emittance_scan_1782966691.h5
+          '3': ./emittance_scan_1782966756.h5
+          '4': ./emittance_scan_1782966820.h5
+          '5': ./emittance_scan_1782966884.h5
+          '6': ./emittance_scan_1782966943.h5
+        timestamp:
+          '0': 1782966627
+          '1': 1782966689
+          '2': 1782966750
+          '3': 1782966817
+          '4': 1782966881
+          '5': 1782966941
+          '6': 1782967003
+        emittance_x:
+          '0': 6.0546070902
+          '1': 6.7549624894
+          '2': 5.2170742743
+          '3': 5.987144684
+          '4': 6.6064386802
+          '5': 6.7429570327
+          '6': 6.1825414136
+        emittance_y:
+          '0': 3.0963458194
+          '1': 4.4921489825
+          '2': 5.4466104584
+          '3': 4.9392510869
+          '4': 3.8132645103
+          '5': 5.006234558
+          '6': 4.8638713335
+        emittance_mean:
+          '0': 4.3297987657
+          '1': 5.5085658636
+          '2': 5.3306070297
+          '3': 5.4380153445
+          '4': 5.0191730552
+          '5': 5.8100623508
+          '6': 5.4837109652
+        min_joint_bmag:
+          '0': 1.1183656656
+          '1': 1.0754733669
+          '2': 2.247198916
+          '3': 1.2492176506
+          '4': 1.2272806012
+          '5': 1.3039395267
+          '6': 1.2545697617
+        min_joint_bmag_quad_value:
+          '0': -4.4447533119
+          '1': -4.3252592121
+          '2': -3.00001
+          '3': -4.2606129091
+          '4': -4.1636434545
+          '5': -4.2895862477
+          '6': -4.2929360606
+        min_bmag_x:
+          '0': 1.0190459084
+          '1': 1.0004941786
+          '2': 2.2089708914
+          '3': 1.0490602536
+          '4': 1.1003845347
+          '5': 1.1103349576
+          '6': 1.0401016072
+        min_bmag_x_quad_value:
+          '0': -3.00001
+          '1': -3.00001
+          '2': -5.059023175
+          '3': -3.00001
+          '4': -3.00001
+          '5': -3.00001
+          '6': -3.00001
+        min_bmag_y:
+          '0': 1.0713848862
+          '1': 1.0760361499
+          '2': 1.5632110187
+          '3': 1.2427598667
+          '4': 1.5936578044
+          '5': 1.2569110097
+          '6': 1.2535732399
+        min_bmag_y_quad_value:
+          '0': -4.7616173535
+          '1': -4.5676789293
+          '2': -3.00001
+          '3': -4.4120309
+          '4': -4.8909096364
+          '5': -4.575759697
+          '6': -4.4120309
+        nominal_bmag_x:
+          '0': 1.0496849678
+          '1': 1.1121411573
+          '2': 5.2224693883
+          '3': 1.0381931585
+          '4': 1.0106909876
+          '5': 1.0078127866
+          '6': 1.0402569534
+        nominal_bmag_y:
+          '0': 11.1838222039
+          '1': 11.0475768286
+          '2': 1.6307248121
+          '3': 15.228702229
+          '4': 12.1888448472
+          '5': 15.1409926648
+          '6': 16.1100115517
+        nominal_joint_bmag:
+          '0': 3.4262939234
+          '1': 3.5052053976
+          '2': 2.9182889528
+          '3': 3.976221129
+          '4': 3.5098654726
+          '5': 3.9063136088
+          '6': 4.0937209891
+        xopt_runtime:
+          '0': 70.4456597348
+          '1': 61.5848977391
+          '2': 60.733071195
+          '3': 63.3261141679
+          '4': 63.7207200481
+          '5': 59.2911419191
+          '6': 61.7289400341
+        xopt_error:
+          '0': false
+          '1': false
+          '2': false
+          '3': false
+          '4': false
+          '5': false
+          '6': false
+      serialize_torch: false
+      serialize_inline: false
+      stopping_condition: null

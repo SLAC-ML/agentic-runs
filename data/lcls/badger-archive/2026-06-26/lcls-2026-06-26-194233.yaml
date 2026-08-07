@@ -1,0 +1,449 @@
+additional_variables: []
+badger_version: 1.5.5.dev45+gf333a632c.d20260626
+constraint_formulas:
+  CBLM:UNDH:1375:I1_LOSS:
+    formula: ''
+    variable_mapping: {}
+creation_ts: 2026-06-26-194233
+critical_constraint_names:
+- CBLM:UNDH:1375:I1_LOSS
+data:
+  CBLM:UNDH:1375:I1_LOSS:
+    '0': -0.03522
+    '1': -0.07044
+    '2': -0.42264
+    '3': 0.0
+    '4': 0.0
+    '5': 0.0
+    '6': -0.24654
+  QUAD:LTUH:620:BCTRL:
+    '0': -31.728
+    '1': -31.5885
+    '2': -31.816
+    '3': -31.98
+    '4': -32.653259255
+    '5': -30.1824923772
+    '6': -30.1416285
+  QUAD:LTUH:640:BCTRL:
+    '0': 37.2156
+    '1': 36.9971
+    '2': 37.579
+    '3': 36.9279
+    '4': 36.9008850419
+    '5': 36.1925474509
+    '6': 36.5833774748
+  QUAD:LTUH:660:BCTRL:
+    '0': -54.9879
+    '1': -54.7639
+    '2': -54.6838
+    '3': -55.333
+    '4': -56.7040116626
+    '5': -57.1370300209
+    '6': -55.047219035
+  QUAD:LTUH:680:BCTRL:
+    '0': 41.4462
+    '1': 41.7913
+    '2': 41.3285
+    '3': 41.3793
+    '4': 40.3611173689
+    '5': 41.409459939
+    '6': 40.3537858262
+  live:
+    '0': 1
+    '1': 1
+    '2': 1
+    '3': 1
+    '4': 1
+    '5': 1
+    '6': 1
+  pulse_intensity_p80:
+    '0': 0.6336033791
+    '1': 0.5002561303
+    '2': 0.581516331
+    '3': 0.6426273024
+    '4': 0.0075473469
+    '5': 0.0060398217
+    '6': 0.6548103469
+  timestamp:
+    '0': 1782528161.09595
+    '1': 1782528168.293553
+    '2': 1782528175.478037
+    '3': 1782528182.667686
+    '4': 1782528191.703738
+    '5': 1782528203.587105
+    '6': 1782528213.25976
+  xopt_error:
+    '0': false
+    '1': false
+    '2': false
+    '3': false
+    '4': false
+    '5': false
+    '6': false
+  xopt_runtime:
+    '0': 7.1857129037
+    '1': 7.0830640681
+    '2': 7.071540745
+    '3': 7.0708884979
+    '4': 7.0666546379
+    '5': 7.0729930168
+    '6': 7.0664355289
+description: Maximize HXR FEL pulse intensity (p80) using Upper Confidence Bound BO
+  on 4 LTUH quads. beta=2, n_mc=128. Beam-loss constraint CBLM:UNDH:1375:I1_LOSS >
+  -30 mV. Grounded in 2026-03-05 best UCB run (obj=2.10) + knowledge (vetted, xopt/BoTorch
+  defaults). Ranges recomputed from live machine 2026-06-26T19:36.
+environment:
+  beamrate_pv: EVNT:SYS0:1:LCLSBEAMRATE
+  beamsize_monitor_base_pv: null
+  buffer_length_s: 1.0
+  charge_pv: SIOC:SYS0:ML00:CALC252
+  check_fault_timeout: 5.0
+  check_var_timeout: 3.0
+  current_pv: BLEN:LI24:886:BIMAX
+  energy_pv: BEND:DMPH:400:BDES
+  interface:
+    name: epics
+  loss_pv: LBLM:COL0:862:A:I0_LOSSHSTSCS
+  name: lcls
+  pulse_id_pv: PATT:SYS0:1:PULSEID
+  pulse_intensity_pv: GDET:FEE1:361:ENRCHSTCUHBR
+  readonly: false
+  trim_delay: 3.0
+  validate_variable_set: true
+formulas: {}
+generator:
+  beta: 2.0
+  computation_time:
+    acquisition_optimization:
+      '0': 0.8455427489
+      '1': 4.0616344777
+      '2': 2.0873324359
+    training:
+      '0': 1.005530091
+      '1': 0.402455505
+      '2': 0.4677489237
+  custom_objective: null
+  fixed_features: null
+  gp_constructor:
+    covar_modules: {}
+    custom_noise_prior: null
+    mean_modules: {}
+    name: standard
+    train_config: null
+    train_kwargs: null
+    train_method: lbfgs
+    train_model: true
+    trainable_mean_keys: []
+    transform_inputs: true
+    use_cached_hyperparameters: false
+    use_low_noise_prior: false
+  max_travel_distances: null
+  n_candidates: 1
+  n_interpolate_points: null
+  n_monte_carlo_samples: 128
+  name: upper_confidence_bound
+  numerical_optimizer:
+    discrete_max_batch_size: 2048
+    discrete_max_choices: 4096
+    max_iter: 1000
+    max_time: 5.0
+    mixed_max_discrete_configurations: 512
+    n_restarts: 20
+    name: LBFGS
+  returns_id: false
+  shift: 0.0
+  supports_batch_generation: true
+  supports_constraints: true
+  supports_discrete_variables: true
+  supports_single_objective: true
+  turbo_controller: null
+  use_cuda: false
+  vocs:
+    constants: {}
+    constraints:
+      CBLM:UNDH:1375:I1_LOSS:
+        dtype: null
+        type: GreaterThanConstraint
+        value: -30.0
+    objectives:
+      pulse_intensity_p80:
+        dtype: null
+        type: MaximizeObjective
+    observables: {}
+    variables:
+      QUAD:LTUH:620:BCTRL:
+        default_value: null
+        domain:
+        - -33.314431500000005
+        - -30.1416285
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:640:BCTRL:
+        default_value: null
+        domain:
+        - 35.3548105
+        - 39.0763695
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:660:BCTRL:
+        default_value: null
+        domain:
+        - -57.737253
+        - -52.23846699999999
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:680:BCTRL:
+        default_value: null
+        domain:
+        - 39.3738805
+        - 43.518499500000004
+        dtype: null
+        type: ContinuousVariable
+id: null
+initial_point_actions:
+- type: add_curr
+- config:
+    fraction: 0.1
+    method: 0
+    n_points: 3
+  type: add_rand
+initial_points:
+  QUAD:LTUH:620:BCTRL:
+    '0': -31.728
+    '1': -31.5885
+    '2': -31.816
+    '3': -31.98
+  QUAD:LTUH:640:BCTRL:
+    '0': 37.2156
+    '1': 36.9971
+    '2': 37.579
+    '3': 36.9279
+  QUAD:LTUH:660:BCTRL:
+    '0': -54.9879
+    '1': -54.7639
+    '2': -54.6838
+    '3': -55.333
+  QUAD:LTUH:680:BCTRL:
+    '0': 41.4462
+    '1': 41.7913
+    '2': 41.3285
+    '3': 41.3793
+name: ucb_hxr_pulse_intensity
+observable_formulas: {}
+relative_to_current: true
+script: null
+stopping_condition: null
+tags: null
+vrange_hard_limit: {}
+vrange_limit_options:
+  ACCL:LI21:180:L1X_ADES:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  ACCL:LI21:180:L1X_PDES:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  ACCL:LI21:1:L1S_ADES:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  ACCL:LI21:1:L1S_PDES:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  ACCL:LI22:1:ADES:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  ACCL:LI22:1:PDES:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  DMD:IN20:1:DELAY_1:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  DMD:IN20:1:DELAY_2:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  DMD:IN20:1:WIDTH_2:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:IN20:121:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:IN20:122:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:IN20:361:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:IN20:371:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:IN20:425:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:IN20:441:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:IN20:511:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:IN20:525:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI21:201:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI21:211:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI21:221:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI21:251:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI21:271:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI21:278:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI24:740:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI24:860:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI26:201:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI26:301:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI26:401:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI26:501:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI26:601:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI26:701:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI26:801:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI26:901:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:440:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:450:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:460:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:620:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:640:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:660:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:680:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  SIOC:SYS0:ML03:AO956:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  SOLN:IN20:121:BCTRL:
+    delta: 0.1
+    limit_option_idx: 0
+    ratio_curr: 0.1
+    ratio_full: 0.1
+xopt_version: 3.1.1

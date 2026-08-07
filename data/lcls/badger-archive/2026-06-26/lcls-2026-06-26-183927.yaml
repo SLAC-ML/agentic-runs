@@ -1,0 +1,266 @@
+additional_variables: []
+badger_version: 0.0.0
+constraint_formulas: {}
+creation_ts: 2026-06-26-183927
+critical_constraint_names: []
+data:
+  QUAD:LI24:740:BCTRL:
+    '0': 0.2235
+    '1': 0.246119
+    '2': 0.213195
+    '3': 0.202392
+    '4': 0.202392
+    '5': 0.202392
+    '6': 0.202392
+    '7': 0.2125116
+    '8': 0.202392
+  QUAD:LI24:860:BCTRL:
+    '0': -0.29592
+    '1': -0.274797
+    '2': -0.320401
+    '3': -0.311114
+    '4': -0.311114
+    '5': -0.311114
+    '6': -0.311114
+    '7': -0.311114
+    '8': -0.3266697
+  QUAD:LTUH:440:BCTRL:
+    '0': -0.585859
+    '1': -0.548344
+    '2': -0.643355
+    '3': -0.637165
+    '4': -0.637165
+    '5': -0.66902325
+    '6': -0.637165
+    '7': -0.637165
+    '8': -0.637165
+  QUAD:LTUH:460:BCTRL:
+    '0': -2.08858
+    '1': -2.09803
+    '2': -2.0372
+    '3': -2.02794
+    '4': -2.02794
+    '5': -2.02794
+    '6': -2.129337
+    '7': -2.02794
+    '8': -2.02794
+  live:
+    '0': 1
+    '1': 1
+    '2': 1
+    '3': 1
+    '4': 1
+    '5': 1
+    '6': 1
+    '7': 1
+    '8': 1
+  pulse_intensity_p80:
+    '0': 1.5842104077
+    '1': 1.6745613472
+    '2': 1.6375058772
+    '3': 1.5671907199
+    '4': 1.6365079944
+    '5': 1.6088550689
+    '6': 1.5503826146
+    '7': 1.6556174072
+    '8': 1.6079579313
+  timestamp:
+    '0': 1782524372.151284
+    '1': 1782524376.317455
+    '2': 1782524380.481505
+    '3': 1782524384.629904
+    '4': 1782524388.792394
+    '5': 1782524392.871225
+    '6': 1782524396.94855
+    '7': 1782524401.030042
+    '8': 1782524405.094114
+  xopt_error:
+    '0': false
+    '1': false
+    '2': false
+    '3': false
+    '4': false
+    '5': false
+    '6': false
+    '7': false
+    '8': false
+  xopt_runtime:
+    '0': 4.2744971709
+    '1': 4.0531462329
+    '2': 4.0529435771
+    '3': 4.038160583
+    '4': 4.0478226049
+    '5': 4.0544881951
+    '6': 4.0525001697
+    '7': 4.0549763013
+    '8': 4.0367448051
+description: Template for dispersion quads in BC2 and LTUH
+environment:
+  beamrate_pv: EVNT:SYS0:1:LCLSBEAMRATE
+  beamsize_monitor_base_pv: 'null'
+  buffer_length_s: 1.0
+  charge_pv: SIOC:SYS0:ML00:CALC252
+  check_fault_timeout: 5.0
+  check_var_timeout: 1.0
+  current_pv: BLEN:LI24:886:BIMAX
+  energy_pv: BEND:DMPH:400:BDES
+  interface:
+    name: epics
+  loss_pv: CBLM:UNDH:1375:I1_LOSSHSTBR
+  name: lcls
+  pulse_id_pv: PATT:SYS0:1:PULSEID
+  pulse_intensity_pv: GDET:FEE1:361:ENRCHSTCUHBR
+  readonly: false
+  trim_delay: 2.0
+  validate_variable_set: true
+formulas: {}
+generator:
+  adaptive: true
+  current_state:
+    N: 4
+    astg: 0
+    doshrink: 0
+    fsim:
+    - -1.6365079943604997
+    - -1.608855068850835
+    - -1.5503826145611128
+    - -1.655617407194768
+    - null
+    fxr: null
+    ind: null
+    jend: 0
+    kend: 4
+    ngen: 5
+    sim:
+    - - -0.637165
+      - -2.02794
+      - 0.202392
+      - -0.311114
+    - - -0.66902325
+      - -2.02794
+      - 0.202392
+      - -0.311114
+    - - -0.637165
+      - -2.129337
+      - 0.202392
+      - -0.311114
+    - - -0.637165
+      - -2.02794
+      - 0.2125116
+      - -0.311114
+    - - -0.637165
+      - -2.02794
+      - 0.202392
+      - -0.3266697
+    x: null
+    xbar: null
+    xc: null
+    xcc: null
+    xe: null
+    xr: null
+  future_state: null
+  initial_point: null
+  initial_simplex: null
+  is_active: true
+  manual_data_cnt: 4
+  name: neldermead
+  returns_id: false
+  supports_single_objective: true
+  trace: false
+  vocs:
+    constants: {}
+    constraints: {}
+    objectives:
+      pulse_intensity_p80:
+        dtype: null
+        type: MaximizeObjective
+    observables: {}
+    variables:
+      QUAD:LI24:740:BCTRL:
+        default_value: null
+        domain:
+        - 0.02350040000000017
+        - 0.4235004000000002
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LI24:860:BCTRL:
+        default_value: null
+        domain:
+        - -0.4959200000000003
+        - -0.09592000000000028
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:440:BCTRL:
+        default_value: null
+        domain:
+        - -1.0858588
+        - -0.08585880000000001
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:460:BCTRL:
+        default_value: null
+        domain:
+        - -2.5885806
+        - -1.5885805999999998
+        dtype: null
+        type: ContinuousVariable
+  x: null
+  y: -1.6079579312904115
+id: null
+initial_point_actions:
+- type: add_curr
+- config:
+    fraction: 0.1
+    method: 0
+    n_points: 3
+  type: add_rand
+initial_points:
+  QUAD:LI24:740:BCTRL:
+    '0': 0.2235
+    '1': 0.246119
+    '2': 0.213195
+    '3': 0.202392
+  QUAD:LI24:860:BCTRL:
+    '0': -0.29592
+    '1': -0.274797
+    '2': -0.320401
+    '3': -0.311114
+  QUAD:LTUH:440:BCTRL:
+    '0': -0.585859
+    '1': -0.548344
+    '2': -0.643355
+    '3': -0.637165
+  QUAD:LTUH:460:BCTRL:
+    '0': -2.08858
+    '1': -2.09803
+    '2': -2.0372
+    '3': -2.02794
+name: dispersion quads
+observable_formulas: {}
+relative_to_current: true
+script: null
+stopping_condition: null
+tags: null
+vrange_hard_limit: {}
+vrange_limit_options:
+  QUAD:LI24:740:BCTRL:
+    delta: 0.2
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LI24:860:BCTRL:
+    delta: 0.2
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:440:BCTRL:
+    delta: 0.5
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:460:BCTRL:
+    delta: 0.5
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+xopt_version: 3.0.1

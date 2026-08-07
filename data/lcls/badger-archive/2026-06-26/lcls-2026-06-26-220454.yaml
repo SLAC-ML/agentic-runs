@@ -1,0 +1,194 @@
+additional_variables: []
+badger_version: 1.5.5.dev45+gf333a632c.d20260626
+constraint_formulas:
+  CBLM:UNDH:1375:I1_LOSS:
+    formula: ''
+    variable_mapping: {}
+creation_ts: 2026-06-26-220454
+critical_constraint_names:
+- CBLM:UNDH:1375:I1_LOSS
+data:
+  CBLM:UNDH:1375:I1_LOSS:
+    '0': -0.1761
+    '1': -0.63396
+    '2': -0.31698
+    '3': -0.59874
+  QUAD:LTUH:620:BCTRL:
+    '0': -33.968
+    '1': -33.7
+    '2': -33.6222
+    '3': -33.6629
+  QUAD:LTUH:640:BCTRL:
+    '0': 39.4556
+    '1': 39.7494
+    '2': 39.829
+    '3': 39.6359
+  QUAD:LTUH:660:BCTRL:
+    '0': -53.8679
+    '1': -53.7884
+    '2': -53.6406
+    '3': -53.9638
+  QUAD:LTUH:680:BCTRL:
+    '0': 42.5662
+    '1': 42.8174
+    '2': 42.7324
+    '3': 42.63
+  live:
+    '0': 1
+    '1': 1
+    '2': 1
+    '3': 1
+  pulse_intensity_p80:
+    '0': 0.4560597515
+    '1': 0.4433463588
+    '2': 0.311380486
+    '3': 0.5194132188
+  timestamp:
+    '0': 1782536701.472068
+    '1': 1782536708.651539
+    '2': 1782536712.998535
+    '3': 1782536720.175184
+  xopt_error:
+    '0': false
+    '1': false
+    '2': false
+    '3': false
+  xopt_runtime:
+    '0': 7.158008276
+    '1': 7.0643567611
+    '2': 4.2330750721
+    '3': 7.0609270371
+description: 'Stage 1: Maximize HXR FEL pulse intensity via LTUH matching quads (620-680)
+  using UCB beta=2.0. Beam-loss constraint CBLM:UNDH:1375:I1_LOSS > -30 mV.'
+environment:
+  beamrate_pv: EVNT:SYS0:1:LCLSBEAMRATE
+  beamsize_monitor_base_pv: null
+  buffer_length_s: 1.0
+  charge_pv: SIOC:SYS0:ML00:CALC252
+  check_fault_timeout: 5.0
+  check_var_timeout: 3.0
+  current_pv: BLEN:LI24:886:BIMAX
+  energy_pv: BEND:DMPH:400:BDES
+  interface:
+    name: epics
+  loss_pv: LBLM:COL0:862:A:I0_LOSSHSTSCS
+  name: lcls
+  pulse_id_pv: PATT:SYS0:1:PULSEID
+  pulse_intensity_pv: GDET:FEE1:361:ENRCHSTCUHBR
+  readonly: false
+  trim_delay: 3.0
+  validate_variable_set: true
+formulas: {}
+generator:
+  beta: 2.0
+  computation_time: null
+  custom_objective: null
+  fixed_features: null
+  gp_constructor:
+    covar_modules: {}
+    custom_noise_prior: null
+    mean_modules: {}
+    name: standard
+    train_config: null
+    train_kwargs: null
+    train_method: lbfgs
+    train_model: true
+    trainable_mean_keys: []
+    transform_inputs: true
+    use_cached_hyperparameters: false
+    use_low_noise_prior: false
+  max_travel_distances: null
+  model: null
+  n_candidates: 1
+  n_interpolate_points: null
+  n_monte_carlo_samples: 128
+  name: upper_confidence_bound
+  numerical_optimizer:
+    discrete_max_batch_size: 2048
+    discrete_max_choices: 4096
+    max_iter: 1000
+    max_time: 5.0
+    mixed_max_discrete_configurations: 512
+    n_restarts: 20
+    name: LBFGS
+  returns_id: false
+  shift: 0.0
+  supports_batch_generation: true
+  supports_constraints: true
+  supports_discrete_variables: true
+  supports_single_objective: true
+  turbo_controller: null
+  use_cuda: false
+  vocs:
+    constants: {}
+    constraints:
+      CBLM:UNDH:1375:I1_LOSS:
+        dtype: null
+        type: GreaterThanConstraint
+        value: -30.0
+    objectives:
+      pulse_intensity_p80:
+        dtype: null
+        type: MaximizeObjective
+    observables: {}
+    variables:
+      QUAD:LTUH:620:BCTRL:
+        default_value: null
+        domain:
+        - -35.968
+        - -31.968
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:640:BCTRL:
+        default_value: null
+        domain:
+        - 37.456
+        - 41.456
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:660:BCTRL:
+        default_value: null
+        domain:
+        - -55.868
+        - -51.868
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:680:BCTRL:
+        default_value: null
+        domain:
+        - 40.566
+        - 44.566
+        dtype: null
+        type: ContinuousVariable
+id: null
+initial_point_actions: null
+initial_points:
+  QUAD:LTUH:620:BCTRL:
+    '0': -33.968
+    '1': -33.7
+    '2': -33.6222
+    '3': -33.6629
+  QUAD:LTUH:640:BCTRL:
+    '0': 39.4556
+    '1': 39.7494
+    '2': 39.829
+    '3': 39.6359
+  QUAD:LTUH:660:BCTRL:
+    '0': -53.8679
+    '1': -53.7884
+    '2': -53.6406
+    '3': -53.9638
+  QUAD:LTUH:680:BCTRL:
+    '0': 42.5662
+    '1': 42.8174
+    '2': 42.7324
+    '3': 42.63
+name: hxr-fel-ucb-ltuh-stage1
+observable_formulas: {}
+relative_to_current: false
+script: null
+stopping_condition: null
+tags: null
+vrange_hard_limit: {}
+vrange_limit_options: null
+xopt_version: 3.1.1

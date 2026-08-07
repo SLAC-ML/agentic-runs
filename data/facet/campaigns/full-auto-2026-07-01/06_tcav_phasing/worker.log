@@ -1,0 +1,31 @@
+/home/fphysics/zhezhang/AgenticOpt/bax_algorithms/bax_algorithms/solenoid_alignment.py:21: UserWarning: Field name "name" in "PathwiseSolenoidAlignment" shadows an attribute in parent "PathwiseOptimization"
+  class PathwiseSolenoidAlignment(PathwiseOptimization):
+2026-07-01 21:37:16,325 - INFO - Starting automatic workflow...
+2026-07-01 21:37:16,325 - INFO - Workflow context: steps=1 dump_location=. reset_env_after=False logging_level=INFO log_file=automatic_workflow_1782967036.log
+2026-07-01 21:37:16,325 - INFO - Ensured workflow output directory exists: .
+2026-07-01 21:37:16,325 - INFO - Creating new FACET-II badger environment.
+/home/fphysics/zhezhang/AgenticOpt/Badger/src/badger/environment.py:131: UserWarning: Field name "variables" in "Environment" shadows an attribute in parent "BaseAutomaticEmittanceEnvironment"
+  return super().__new__(mcs, name, bases, namespace)
+2026-07-01 21:37:20,578 - INFO - Running workflow step: tcav_phasing
+2026-07-01 21:37:20,578 - INFO - Step 1/1 parameters: {'amplitude_tolerance': 0.01, 'max_scan_range': [80, 100], 'n_initial_points': 5, 'n_iterations': 5, 'phase_tolerance': 0.5, 'tcav_on_amplitude': 4}
+2026-07-01 21:37:21,260 - INFO - Starting tcav_phasing.
+2026-07-01 21:37:21,289 - INFO - Starting automatic TCAV phasing. Current TCAV phase: 93.34377395262294
+2026-07-01 21:37:21,289 - INFO - TCAV phasing config: tcav_on_amplitude=4 n_initial_points=5 n_iterations=5 max_scan_range=[80, 100] min_transmission=0.4 dump_location=None
+2026-07-01 21:37:21,322 - INFO - Starting TCAV phase optimization....
+2026-07-01 21:37:21,322 - INFO - Acquiring nominal centroid.
+2026-07-01 21:37:24,828 - INFO - Initialized generator expected_improvement
+2026-07-01 21:37:24,829 - INFO - Initial TCAV amplitude: 4.0, phase: 93.34377395262294
+2026-07-01 21:37:30,440 - INFO - Running Xopt step
+2026-07-01 21:37:32,689 - INFO - Running Xopt step
+2026-07-01 21:37:34,729 - INFO - Running Xopt step
+2026-07-01 21:37:36,609 - INFO - Running Xopt step
+2026-07-01 21:37:38,788 - INFO - Converged
+2026-07-01 21:37:38,794 - INFO - setting final phase to 92.87318591172351
+2026-07-01 21:37:43,297 - INFO - Restored original TCAV amplitude.
+2026-07-01 21:37:43,297 - INFO - TCAV phase optimization complete.
+2026-07-01 21:37:43,302 - INFO - Automatic TCAV phasing finished. Optimized phase: 92.87318591172351 duration=22.04 s
+2026-07-01 21:37:43,323 - INFO - Appended Xopt serialization for tcav_phasing to ./automatic_workflow_xopt_1782967036.yaml
+2026-07-01 21:37:43,323 - INFO - Completed workflow step: tcav_phasing (step 1/1) in 22.75 s
+2026-07-01 21:37:43,324 - INFO - Skipping post-workflow environment reset (reset_env_after=False).
+2026-07-01 21:37:43,324 - INFO - Automatic workflow completed.
+2026-07-01 21:37:43,324 - INFO - Workflow summary: completed_steps=1 total_steps=1 duration=27.00 s xopt_dump_file=./automatic_workflow_xopt_1782967036.yaml

@@ -1,0 +1,3 @@
+- type: measure_emittance
+  screen_name: PR10571
+  screen_settle_time: 2

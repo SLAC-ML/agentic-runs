@@ -1,0 +1,340 @@
+/home/fphysics/zhezhang/AgenticOpt/bax_algorithms/bax_algorithms/solenoid_alignment.py:21: UserWarning: Field name "name" in "PathwiseSolenoidAlignment" shadows an attribute in parent "PathwiseOptimization"
+  class PathwiseSolenoidAlignment(PathwiseOptimization):
+2026-07-01 23:39:31,410 - INFO - Starting automatic workflow...
+2026-07-01 23:39:31,410 - INFO - Workflow context: steps=1 dump_location=. reset_env_after=False logging_level=INFO log_file=automatic_workflow_1782974371.log
+2026-07-01 23:39:31,410 - INFO - Ensured workflow output directory exists: .
+2026-07-01 23:39:31,410 - INFO - Creating new FACET-II badger environment.
+/home/fphysics/zhezhang/AgenticOpt/Badger/src/badger/environment.py:131: UserWarning: Field name "variables" in "Environment" shadows an attribute in parent "BaseAutomaticEmittanceEnvironment"
+  return super().__new__(mcs, name, bases, namespace)
+2026-07-01 23:39:35,395 - INFO - Running workflow step: minimize_injector_emittance
+2026-07-01 23:39:35,395 - INFO - Step 1/1 parameters: {'n_steps': 10, 'variables': {'SOLN:IN10:121:BCTRL': [0.39, 0.41], 'QUAD:IN10:121:BCTRL': [-0.008, 0.008], 'QUAD:IN10:122:BCTRL': [-0.008, 0.008]}}
+2026-07-01 23:39:36,079 - INFO - Starting emittance_opt.
+2026-07-01 23:39:36,079 - INFO - Starting injector emittance optimization.
+2026-07-01 23:39:36,108 - INFO - Initialized generator expected_improvement
+2026-07-01 23:39:36,109 - INFO - Running initial evaluations (current + 2 random points).
+{'name': 'QE04', 'area': 'INJ'}
+2026-07-01 23:39:43,485 - INFO - Initialized generator upper_confidence_bound
+2026-07-01 23:39:49,681 - INFO - Running x scans
+2026-07-01 23:39:49,681 - INFO - Iteration 0 for dimension x
+2026-07-01 23:39:49,682 - INFO - Running Xopt step
+2026-07-01 23:39:57,202 - INFO - Iteration 1 for dimension x
+2026-07-01 23:39:57,203 - INFO - Running Xopt step
+2026-07-01 23:40:01,937 - INFO - Iteration 2 for dimension x
+2026-07-01 23:40:01,937 - INFO - Running Xopt step
+2026-07-01 23:40:07,613 - INFO - Iteration 3 for dimension x
+2026-07-01 23:40:07,614 - INFO - Running Xopt step
+2026-07-01 23:40:14,808 - INFO - Iteration 4 for dimension x
+2026-07-01 23:40:14,809 - INFO - Running Xopt step
+2026-07-01 23:40:21,827 - INFO - Running y scans
+2026-07-01 23:40:21,827 - INFO - Iteration 0 for dimension y
+2026-07-01 23:40:21,828 - INFO - Running Xopt step
+2026-07-01 23:40:27,654 - INFO - Iteration 1 for dimension y
+2026-07-01 23:40:27,655 - INFO - Running Xopt step
+2026-07-01 23:40:33,355 - INFO - Iteration 2 for dimension y
+2026-07-01 23:40:33,355 - INFO - Running Xopt step
+2026-07-01 23:40:39,765 - INFO - saving image to ./emittance_visualization_1782974383.jpeg
+2026-07-01 23:40:39,871 - INFO - saving data to ./emittance_scan_1782974383.h5
+{'name': 'QE04', 'area': 'INJ'}
+2026-07-01 23:40:47,225 - INFO - Initialized generator upper_confidence_bound
+2026-07-01 23:40:53,466 - INFO - Running x scans
+2026-07-01 23:40:53,466 - INFO - Iteration 0 for dimension x
+2026-07-01 23:40:53,467 - INFO - Running Xopt step
+2026-07-01 23:41:01,101 - INFO - Iteration 1 for dimension x
+2026-07-01 23:41:01,102 - INFO - Running Xopt step
+2026-07-01 23:41:08,542 - INFO - Iteration 2 for dimension x
+2026-07-01 23:41:08,543 - INFO - Running Xopt step
+2026-07-01 23:41:16,070 - INFO - Iteration 3 for dimension x
+2026-07-01 23:41:16,071 - INFO - Running Xopt step
+2026-07-01 23:41:23,502 - INFO - Iteration 4 for dimension x
+2026-07-01 23:41:23,503 - INFO - Running Xopt step
+2026-07-01 23:41:30,988 - INFO - Running y scans
+2026-07-01 23:41:30,988 - INFO - Iteration 0 for dimension y
+2026-07-01 23:41:30,989 - INFO - Running Xopt step
+2026-07-01 23:41:35,693 - INFO - Iteration 1 for dimension y
+2026-07-01 23:41:35,694 - INFO - Running Xopt step
+2026-07-01 23:41:40,269 - INFO - Iteration 2 for dimension y
+2026-07-01 23:41:40,269 - INFO - Running Xopt step
+2026-07-01 23:41:46,202 - INFO - saving image to ./emittance_visualization_1782974447.jpeg
+2026-07-01 23:41:46,296 - INFO - saving data to ./emittance_scan_1782974447.h5
+{'name': 'QE04', 'area': 'INJ'}
+2026-07-01 23:41:50,894 - INFO - Initialized generator upper_confidence_bound
+2026-07-01 23:41:57,215 - INFO - Running x scans
+2026-07-01 23:41:57,216 - INFO - Iteration 0 for dimension x
+2026-07-01 23:41:57,216 - INFO - Running Xopt step
+2026-07-01 23:42:04,659 - INFO - Iteration 1 for dimension x
+2026-07-01 23:42:04,659 - INFO - Running Xopt step
+2026-07-01 23:42:12,086 - INFO - Iteration 2 for dimension x
+2026-07-01 23:42:12,086 - INFO - Running Xopt step
+2026-07-01 23:42:19,579 - INFO - Iteration 3 for dimension x
+2026-07-01 23:42:19,580 - INFO - Running Xopt step
+2026-07-01 23:42:27,119 - INFO - Iteration 4 for dimension x
+2026-07-01 23:42:27,120 - INFO - Running Xopt step
+2026-07-01 23:42:32,474 - INFO - Running y scans
+2026-07-01 23:42:32,474 - INFO - Iteration 0 for dimension y
+2026-07-01 23:42:32,475 - INFO - Running Xopt step
+2026-07-01 23:42:39,793 - INFO - Iteration 1 for dimension y
+2026-07-01 23:42:39,794 - INFO - Running Xopt step
+2026-07-01 23:42:44,558 - INFO - Iteration 2 for dimension y
+2026-07-01 23:42:44,559 - INFO - Running Xopt step
+2026-07-01 23:42:50,924 - INFO - saving image to ./emittance_visualization_1782974510.jpeg
+2026-07-01 23:42:51,017 - INFO - saving data to ./emittance_scan_1782974510.h5
+2026-07-01 23:42:54,183 - INFO - Running Xopt step
+{'name': 'QE04', 'area': 'INJ'}
+2026-07-01 23:42:59,247 - INFO - Initialized generator upper_confidence_bound
+2026-07-01 23:43:05,523 - INFO - Running x scans
+2026-07-01 23:43:05,523 - INFO - Iteration 0 for dimension x
+2026-07-01 23:43:05,523 - INFO - Running Xopt step
+2026-07-01 23:43:12,961 - INFO - Iteration 1 for dimension x
+2026-07-01 23:43:12,962 - INFO - Running Xopt step
+2026-07-01 23:43:17,566 - INFO - Iteration 2 for dimension x
+2026-07-01 23:43:17,567 - INFO - Running Xopt step
+2026-07-01 23:43:23,139 - INFO - Iteration 3 for dimension x
+2026-07-01 23:43:23,140 - INFO - Running Xopt step
+2026-07-01 23:43:30,116 - INFO - Iteration 4 for dimension x
+2026-07-01 23:43:30,116 - INFO - Running Xopt step
+2026-07-01 23:43:34,873 - INFO - Running y scans
+2026-07-01 23:43:34,873 - INFO - Iteration 0 for dimension y
+2026-07-01 23:43:34,874 - INFO - Running Xopt step
+2026-07-01 23:43:41,136 - INFO - Iteration 1 for dimension y
+2026-07-01 23:43:41,136 - INFO - Running Xopt step
+2026-07-01 23:43:46,762 - INFO - Iteration 2 for dimension y
+2026-07-01 23:43:46,763 - INFO - Running Xopt step
+2026-07-01 23:43:52,569 - INFO - saving image to ./emittance_visualization_1782974579.jpeg
+2026-07-01 23:43:52,672 - INFO - saving data to ./emittance_scan_1782974579.h5
+2026-07-01 23:43:56,854 - INFO - Running Xopt step
+{'name': 'QE04', 'area': 'INJ'}
+2026-07-01 23:44:02,153 - INFO - Initialized generator upper_confidence_bound
+2026-07-01 23:44:08,288 - INFO - Running x scans
+2026-07-01 23:44:08,288 - INFO - Iteration 0 for dimension x
+2026-07-01 23:44:08,289 - INFO - Running Xopt step
+2026-07-01 23:44:15,865 - INFO - Iteration 1 for dimension x
+2026-07-01 23:44:15,866 - INFO - Running Xopt step
+2026-07-01 23:44:20,559 - INFO - Iteration 2 for dimension x
+2026-07-01 23:44:20,560 - INFO - Running Xopt step
+2026-07-01 23:44:26,051 - INFO - Iteration 3 for dimension x
+2026-07-01 23:44:26,052 - INFO - Running Xopt step
+2026-07-01 23:44:33,262 - INFO - Iteration 4 for dimension x
+2026-07-01 23:44:33,263 - INFO - Running Xopt step
+2026-07-01 23:44:40,264 - INFO - Running y scans
+2026-07-01 23:44:40,264 - INFO - Iteration 0 for dimension y
+2026-07-01 23:44:40,264 - INFO - Running Xopt step
+2026-07-01 23:44:45,964 - INFO - Iteration 1 for dimension y
+2026-07-01 23:44:45,965 - INFO - Running Xopt step
+2026-07-01 23:44:51,344 - INFO - Iteration 2 for dimension y
+2026-07-01 23:44:51,344 - INFO - Running Xopt step
+2026-07-01 23:44:57,180 - INFO - saving image to ./emittance_visualization_1782974642.jpeg
+2026-07-01 23:44:57,269 - INFO - saving data to ./emittance_scan_1782974642.h5
+2026-07-01 23:45:01,270 - INFO - Running Xopt step
+{'name': 'QE04', 'area': 'INJ'}
+2026-07-01 23:45:04,061 - INFO - Initialized generator upper_confidence_bound
+2026-07-01 23:45:10,181 - INFO - Running x scans
+2026-07-01 23:45:10,181 - INFO - Iteration 0 for dimension x
+2026-07-01 23:45:10,182 - INFO - Running Xopt step
+2026-07-01 23:45:17,731 - INFO - Iteration 1 for dimension x
+2026-07-01 23:45:17,731 - INFO - Running Xopt step
+2026-07-01 23:45:22,229 - INFO - Iteration 2 for dimension x
+2026-07-01 23:45:22,229 - INFO - Running Xopt step
+2026-07-01 23:45:27,769 - INFO - Iteration 3 for dimension x
+2026-07-01 23:45:27,770 - INFO - Running Xopt step
+2026-07-01 23:45:34,652 - INFO - Iteration 4 for dimension x
+2026-07-01 23:45:34,653 - INFO - Running Xopt step
+2026-07-01 23:45:39,274 - INFO - Running y scans
+2026-07-01 23:45:39,275 - INFO - Iteration 0 for dimension y
+2026-07-01 23:45:39,275 - INFO - Running Xopt step
+2026-07-01 23:45:46,048 - INFO - Iteration 1 for dimension y
+2026-07-01 23:45:46,049 - INFO - Running Xopt step
+2026-07-01 23:45:50,841 - INFO - Iteration 2 for dimension y
+2026-07-01 23:45:50,842 - INFO - Running Xopt step
+2026-07-01 23:45:56,766 - INFO - saving image to ./emittance_visualization_1782974704.jpeg
+2026-07-01 23:45:56,848 - INFO - saving data to ./emittance_scan_1782974704.h5
+2026-07-01 23:46:00,252 - INFO - Running Xopt step
+{'name': 'QE04', 'area': 'INJ'}
+2026-07-01 23:46:03,565 - INFO - Initialized generator upper_confidence_bound
+2026-07-01 23:46:09,671 - INFO - Running x scans
+2026-07-01 23:46:09,672 - INFO - Iteration 0 for dimension x
+2026-07-01 23:46:09,672 - INFO - Running Xopt step
+2026-07-01 23:46:17,034 - INFO - Iteration 1 for dimension x
+2026-07-01 23:46:17,035 - INFO - Running Xopt step
+2026-07-01 23:46:24,361 - INFO - Iteration 2 for dimension x
+2026-07-01 23:46:24,361 - INFO - Running Xopt step
+2026-07-01 23:46:31,646 - INFO - Iteration 3 for dimension x
+2026-07-01 23:46:31,647 - INFO - Running Xopt step
+2026-07-01 23:46:38,970 - INFO - Iteration 4 for dimension x
+2026-07-01 23:46:38,971 - INFO - Running Xopt step
+2026-07-01 23:46:43,510 - INFO - Running y scans
+2026-07-01 23:46:43,510 - INFO - Iteration 0 for dimension y
+2026-07-01 23:46:43,511 - INFO - Running Xopt step
+2026-07-01 23:46:50,861 - INFO - Iteration 1 for dimension y
+2026-07-01 23:46:50,861 - INFO - Running Xopt step
+2026-07-01 23:46:55,376 - INFO - Iteration 2 for dimension y
+2026-07-01 23:46:55,377 - INFO - Running Xopt step
+2026-07-01 23:47:00,526 - INFO - saving image to ./emittance_visualization_1782974763.jpeg
+2026-07-01 23:47:00,619 - INFO - saving data to ./emittance_scan_1782974763.h5
+2026-07-01 23:47:03,132 - INFO - Running Xopt step
+{'name': 'QE04', 'area': 'INJ'}
+2026-07-01 23:47:06,905 - INFO - Initialized generator upper_confidence_bound
+2026-07-01 23:47:12,990 - INFO - Running x scans
+2026-07-01 23:47:12,990 - INFO - Iteration 0 for dimension x
+2026-07-01 23:47:12,990 - INFO - Running Xopt step
+2026-07-01 23:47:20,247 - INFO - Iteration 1 for dimension x
+2026-07-01 23:47:20,248 - INFO - Running Xopt step
+2026-07-01 23:47:24,651 - INFO - Iteration 2 for dimension x
+2026-07-01 23:47:24,652 - INFO - Running Xopt step
+2026-07-01 23:47:32,063 - INFO - Iteration 3 for dimension x
+2026-07-01 23:47:32,064 - INFO - Running Xopt step
+2026-07-01 23:47:38,870 - INFO - Iteration 4 for dimension x
+2026-07-01 23:47:38,871 - INFO - Running Xopt step
+2026-07-01 23:47:45,779 - INFO - Running y scans
+2026-07-01 23:47:45,779 - INFO - Iteration 0 for dimension y
+2026-07-01 23:47:45,780 - INFO - Running Xopt step
+2026-07-01 23:47:52,761 - INFO - Iteration 1 for dimension y
+2026-07-01 23:47:52,762 - INFO - Running Xopt step
+2026-07-01 23:47:57,347 - INFO - Iteration 2 for dimension y
+2026-07-01 23:47:57,347 - INFO - Running Xopt step
+2026-07-01 23:48:03,697 - INFO - saving image to ./emittance_visualization_1782974826.jpeg
+2026-07-01 23:48:03,807 - INFO - saving data to ./emittance_scan_1782974826.h5
+2026-07-01 23:48:07,853 - INFO - Running Xopt step
+{'name': 'QE04', 'area': 'INJ'}
+2026-07-01 23:48:11,771 - INFO - Initialized generator upper_confidence_bound
+2026-07-01 23:48:17,831 - INFO - Running x scans
+2026-07-01 23:48:17,832 - INFO - Iteration 0 for dimension x
+2026-07-01 23:48:17,832 - INFO - Running Xopt step
+2026-07-01 23:48:25,250 - INFO - Iteration 1 for dimension x
+2026-07-01 23:48:25,251 - INFO - Running Xopt step
+2026-07-01 23:48:29,690 - INFO - Iteration 2 for dimension x
+2026-07-01 23:48:29,691 - INFO - Running Xopt step
+2026-07-01 23:48:34,970 - INFO - Iteration 3 for dimension x
+2026-07-01 23:48:34,971 - INFO - Running Xopt step
+2026-07-01 23:48:42,095 - INFO - Iteration 4 for dimension x
+2026-07-01 23:48:42,095 - INFO - Running Xopt step
+2026-07-01 23:48:48,944 - INFO - Running y scans
+2026-07-01 23:48:48,944 - INFO - Iteration 0 for dimension y
+2026-07-01 23:48:48,944 - INFO - Running Xopt step
+2026-07-01 23:48:53,632 - INFO - Iteration 1 for dimension y
+2026-07-01 23:48:53,632 - INFO - Running Xopt step
+2026-07-01 23:48:59,005 - INFO - Iteration 2 for dimension y
+2026-07-01 23:48:59,006 - INFO - Running Xopt step
+2026-07-01 23:49:05,600 - INFO - saving image to ./emittance_visualization_1782974891.jpeg
+2026-07-01 23:49:05,703 - INFO - saving data to ./emittance_scan_1782974891.h5
+2026-07-01 23:49:10,305 - INFO - Running Xopt step
+{'name': 'QE04', 'area': 'INJ'}
+2026-07-01 23:49:12,737 - INFO - Initialized generator upper_confidence_bound
+2026-07-01 23:49:18,953 - INFO - Running x scans
+2026-07-01 23:49:18,953 - INFO - Iteration 0 for dimension x
+2026-07-01 23:49:18,954 - INFO - Running Xopt step
+2026-07-01 23:49:26,352 - INFO - Iteration 1 for dimension x
+2026-07-01 23:49:26,353 - INFO - Running Xopt step
+2026-07-01 23:49:30,982 - INFO - Iteration 2 for dimension x
+2026-07-01 23:49:30,983 - INFO - Running Xopt step
+2026-07-01 23:49:36,333 - INFO - Iteration 3 for dimension x
+2026-07-01 23:49:36,334 - INFO - Running Xopt step
+2026-07-01 23:49:41,766 - INFO - Iteration 4 for dimension x
+2026-07-01 23:49:41,767 - INFO - Running Xopt step
+2026-07-01 23:49:48,775 - INFO - Running y scans
+2026-07-01 23:49:48,775 - INFO - Iteration 0 for dimension y
+2026-07-01 23:49:48,776 - INFO - Running Xopt step
+2026-07-01 23:49:54,942 - INFO - Iteration 1 for dimension y
+2026-07-01 23:49:54,943 - INFO - Running Xopt step
+2026-07-01 23:50:00,322 - INFO - Iteration 2 for dimension y
+2026-07-01 23:50:00,323 - INFO - Running Xopt step
+2026-07-01 23:50:05,984 - INFO - saving image to ./emittance_visualization_1782974952.jpeg
+2026-07-01 23:50:06,071 - INFO - saving data to ./emittance_scan_1782974952.h5
+2026-07-01 23:50:10,740 - INFO - Running Xopt step
+{'name': 'QE04', 'area': 'INJ'}
+2026-07-01 23:50:15,345 - INFO - Initialized generator upper_confidence_bound
+2026-07-01 23:50:21,427 - INFO - Running x scans
+2026-07-01 23:50:21,427 - INFO - Iteration 0 for dimension x
+2026-07-01 23:50:21,428 - INFO - Running Xopt step
+2026-07-01 23:50:28,735 - INFO - Iteration 1 for dimension x
+2026-07-01 23:50:28,735 - INFO - Running Xopt step
+2026-07-01 23:50:33,239 - INFO - Iteration 2 for dimension x
+2026-07-01 23:50:33,240 - INFO - Running Xopt step
+2026-07-01 23:50:40,659 - INFO - Iteration 3 for dimension x
+2026-07-01 23:50:40,660 - INFO - Running Xopt step
+2026-07-01 23:50:45,227 - INFO - Iteration 4 for dimension x
+2026-07-01 23:50:45,227 - INFO - Running Xopt step
+2026-07-01 23:50:52,047 - INFO - Running y scans
+2026-07-01 23:50:52,047 - INFO - Iteration 0 for dimension y
+2026-07-01 23:50:52,048 - INFO - Running Xopt step
+2026-07-01 23:50:57,029 - INFO - Iteration 1 for dimension y
+2026-07-01 23:50:57,029 - INFO - Running Xopt step
+2026-07-01 23:51:03,414 - INFO - Iteration 2 for dimension y
+2026-07-01 23:51:03,414 - INFO - Running Xopt step
+2026-07-01 23:51:09,670 - INFO - saving image to ./emittance_visualization_1782975015.jpeg
+2026-07-01 23:51:09,771 - INFO - saving data to ./emittance_scan_1782975015.h5
+2026-07-01 23:51:13,559 - INFO - Running Xopt step
+{'name': 'QE04', 'area': 'INJ'}
+2026-07-01 23:51:16,982 - INFO - Initialized generator upper_confidence_bound
+2026-07-01 23:51:23,018 - INFO - Running x scans
+2026-07-01 23:51:23,018 - INFO - Iteration 0 for dimension x
+2026-07-01 23:51:23,019 - INFO - Running Xopt step
+2026-07-01 23:51:30,371 - INFO - Iteration 1 for dimension x
+2026-07-01 23:51:30,372 - INFO - Running Xopt step
+2026-07-01 23:51:34,913 - INFO - Iteration 2 for dimension x
+2026-07-01 23:51:34,913 - INFO - Running Xopt step
+2026-07-01 23:51:40,243 - INFO - Iteration 3 for dimension x
+2026-07-01 23:51:40,243 - INFO - Running Xopt step
+2026-07-01 23:51:47,310 - INFO - Iteration 4 for dimension x
+2026-07-01 23:51:47,310 - INFO - Running Xopt step
+2026-07-01 23:51:52,653 - INFO - Running y scans
+2026-07-01 23:51:52,654 - INFO - Iteration 0 for dimension y
+2026-07-01 23:51:52,654 - INFO - Running Xopt step
+2026-07-01 23:51:59,129 - INFO - Iteration 1 for dimension y
+2026-07-01 23:51:59,129 - INFO - Running Xopt step
+2026-07-01 23:52:03,634 - INFO - Iteration 2 for dimension y
+2026-07-01 23:52:03,635 - INFO - Running Xopt step
+2026-07-01 23:52:09,608 - INFO - saving image to ./emittance_visualization_1782975076.jpeg
+2026-07-01 23:52:09,707 - INFO - saving data to ./emittance_scan_1782975076.h5
+2026-07-01 23:52:13,389 - INFO - Running Xopt step
+{'name': 'QE04', 'area': 'INJ'}
+2026-07-01 23:52:16,985 - INFO - Initialized generator upper_confidence_bound
+2026-07-01 23:52:23,056 - INFO - Running x scans
+2026-07-01 23:52:23,056 - INFO - Iteration 0 for dimension x
+2026-07-01 23:52:23,057 - INFO - Running Xopt step
+2026-07-01 23:52:31,065 - INFO - Iteration 1 for dimension x
+2026-07-01 23:52:31,067 - INFO - Running Xopt step
+2026-07-01 23:52:35,588 - INFO - Iteration 2 for dimension x
+2026-07-01 23:52:35,589 - INFO - Running Xopt step
+2026-07-01 23:52:41,023 - INFO - Iteration 3 for dimension x
+2026-07-01 23:52:41,023 - INFO - Running Xopt step
+2026-07-01 23:52:47,955 - INFO - Iteration 4 for dimension x
+2026-07-01 23:52:47,956 - INFO - Running Xopt step
+2026-07-01 23:52:53,281 - INFO - Running y scans
+2026-07-01 23:52:53,281 - INFO - Iteration 0 for dimension y
+2026-07-01 23:52:53,281 - INFO - Running Xopt step
+2026-07-01 23:52:59,463 - INFO - Iteration 1 for dimension y
+2026-07-01 23:52:59,464 - INFO - Running Xopt step
+2026-07-01 23:53:04,739 - INFO - Iteration 2 for dimension y
+2026-07-01 23:53:04,739 - INFO - Running Xopt step
+2026-07-01 23:53:10,557 - INFO - saving image to ./emittance_visualization_1782975136.jpeg
+2026-07-01 23:53:10,641 - INFO - saving data to ./emittance_scan_1782975136.h5
+2026-07-01 23:53:15,024 - INFO - Evaluating best point during injector emittance optimization.
+{'name': 'QE04', 'area': 'INJ'}
+2026-07-01 23:53:17,184 - INFO - Initialized generator upper_confidence_bound
+2026-07-01 23:53:23,242 - INFO - Running x scans
+2026-07-01 23:53:23,243 - INFO - Iteration 0 for dimension x
+2026-07-01 23:53:23,243 - INFO - Running Xopt step
+2026-07-01 23:53:30,715 - INFO - Iteration 1 for dimension x
+2026-07-01 23:53:30,715 - INFO - Running Xopt step
+2026-07-01 23:53:35,255 - INFO - Iteration 2 for dimension x
+2026-07-01 23:53:35,256 - INFO - Running Xopt step
+2026-07-01 23:53:40,666 - INFO - Iteration 3 for dimension x
+2026-07-01 23:53:40,667 - INFO - Running Xopt step
+2026-07-01 23:53:46,241 - INFO - Iteration 4 for dimension x
+2026-07-01 23:53:46,241 - INFO - Running Xopt step
+2026-07-01 23:53:51,954 - INFO - Running y scans
+2026-07-01 23:53:51,954 - INFO - Iteration 0 for dimension y
+2026-07-01 23:53:51,954 - INFO - Running Xopt step
+2026-07-01 23:53:57,773 - INFO - Iteration 1 for dimension y
+2026-07-01 23:53:57,773 - INFO - Running Xopt step
+2026-07-01 23:54:03,076 - INFO - Iteration 2 for dimension y
+2026-07-01 23:54:03,077 - INFO - Running Xopt step
+2026-07-01 23:54:09,239 - INFO - saving image to ./emittance_visualization_1782975197.jpeg
+2026-07-01 23:54:09,339 - INFO - saving data to ./emittance_scan_1782975197.h5
+2026-07-01 23:54:13,733 - INFO - Best point evaluated during injector emittance optimization.
+2026-07-01 23:54:13,733 - INFO - Completed injector emittance optimization.
+2026-07-01 23:54:13,753 - INFO - Appended Xopt serialization for minimize_injector_emittance to ./automatic_workflow_xopt_1782974371.yaml
+2026-07-01 23:54:13,753 - INFO - Completed workflow step: minimize_injector_emittance (step 1/1) in 878.36 s
+2026-07-01 23:54:13,753 - INFO - Skipping post-workflow environment reset (reset_env_after=False).
+2026-07-01 23:54:13,753 - INFO - Automatic workflow completed.
+2026-07-01 23:54:13,753 - INFO - Workflow summary: completed_steps=1 total_steps=1 duration=882.34 s xopt_dump_file=./automatic_workflow_xopt_1782974371.yaml

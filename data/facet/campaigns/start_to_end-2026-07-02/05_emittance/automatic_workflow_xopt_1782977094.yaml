@@ -1,0 +1,310 @@
+workflow_timestamp: 1782977094
+task_handlers:
+  minimize_injector_emittance:
+  - step_index: 1
+    step_type: minimize_injector_emittance
+    xopt:
+      generator:
+        returns_id: false
+        supports_batch_generation: true
+        supports_single_objective: true
+        supports_constraints: true
+        supports_discrete_variables: true
+        vocs:
+          variables:
+            SOLN:IN10:121:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - 0.39
+              - 0.41
+              type: ContinuousVariable
+            QUAD:IN10:121:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -0.008
+              - 0.008
+              type: ContinuousVariable
+            QUAD:IN10:122:BCTRL:
+              dtype: null
+              default_value: null
+              domain:
+              - -0.008
+              - 0.008
+              type: ContinuousVariable
+          objectives:
+            emittance_mean:
+              dtype: null
+              type: MinimizeObjective
+          constraints:
+            min_joint_bmag:
+              dtype: null
+              value: 1.5
+              type: LessThanConstraint
+          constants: {}
+          observables: {}
+        n_monte_carlo_samples: 128
+        turbo_controller: null
+        use_cuda: false
+        gp_constructor:
+          name: standard
+          use_low_noise_prior: false
+          covar_modules: {}
+          mean_modules: {}
+          trainable_mean_keys: []
+          transform_inputs: true
+          custom_noise_prior: null
+          use_cached_hyperparameters: false
+          train_method: lbfgs
+          train_model: true
+          train_config: null
+          train_kwargs: null
+        numerical_optimizer:
+          name: LBFGS
+          n_restarts: 20
+          max_iter: 1000
+          max_time: 5.0
+          mixed_max_discrete_configurations: 512
+          discrete_max_choices: 4096
+          discrete_max_batch_size: 2048
+        max_travel_distances: null
+        fixed_features: null
+        computation_time:
+          training:
+            '0': 0.217863848
+            '1': 0.294138429
+            '2': 0.2806050139
+            '3': 0.2551403842
+            '4': 0.3511611999
+            '5': 0.435308387
+          acquisition_optimization:
+            '0': 1.326250935
+            '1': 1.983629799
+            '2': 0.6400176359
+            '3': 1.512667086
+            '4': 3.7319823049
+            '5': 0.3069002451
+        custom_objective: null
+        n_interpolate_points: null
+        n_candidates: 1
+      evaluator:
+        function: autonomous_control.facet.emittance_opt.minimize_injector_emittance.<locals>.evaluate
+        max_workers: 1
+        function_kwargs: {}
+        vectorized: false
+      strict: true
+      dump_file: null
+      data:
+        SOLN:IN10:121:BCTRL:
+          '0': 0.3952124
+          '1': 0.3954348594
+          '2': 0.4010551981
+          '3': 0.4011842048
+          '4': 0.3958076728
+          '5': 0.4069460255
+          '6': 0.3935477811
+          '7': 0.3919624857
+          '8': 0.39
+          '9': 0.4011842048
+        QUAD:IN10:121:BCTRL:
+          '0': -0.000546
+          '1': -0.0021482931
+          '2': 0.0020107201
+          '3': 0.0032180721
+          '4': 0.007129103
+          '5': 0.00141761
+          '6': -0.008
+          '7': 0.008
+          '8': -0.008
+          '9': 0.0032180721
+        QUAD:IN10:122:BCTRL:
+          '0': 0.000558236
+          '1': 0.0066800532
+          '2': -0.0017957899
+          '3': -0.0059999266
+          '4': -0.0036819223
+          '5': -0.008
+          '6': -0.008
+          '7': -0.004289099
+          '8': 0.008
+          '9': -0.0059999266
+        save_filename:
+          '0': ./emittance_scan_1782977106.h5
+          '1': ./emittance_scan_1782977165.h5
+          '2': ./emittance_scan_1782977224.h5
+          '3': ./emittance_scan_1782977290.h5
+          '4': ./emittance_scan_1782977357.h5
+          '5': ./emittance_scan_1782977418.h5
+          '6': ./emittance_scan_1782977482.h5
+          '7': ./emittance_scan_1782977546.h5
+          '8': ./emittance_scan_1782977607.h5
+          '9': ./emittance_scan_1782977668.h5
+        timestamp:
+          '0': 1782977163
+          '1': 1782977222
+          '2': 1782977286
+          '3': 1782977352
+          '4': 1782977415
+          '5': 1782977478
+          '6': 1782977540
+          '7': 1782977604
+          '8': 1782977666
+          '9': 1782977735
+        emittance_x:
+          '0': 5.2969495423
+          '1': 6.0963275058
+          '2': 4.5043799
+          '3': 4.2292768347
+          '4': 5.9357758608
+          '5': 4.9435014406
+          '6': 5.2788118532
+          '7': 5.6144729512
+          '8': 6.0380427978
+          '9': 4.4993193462
+        emittance_y:
+          '0': 4.7410189579
+          '1': 4.8655352532
+          '2': 4.8324003948
+          '3': 4.8663132873
+          '4': 4.1408562408
+          '5': 6.5745648728
+          '6': 4.399055394
+          '7': 4.7394646906
+          '8': 4.8051746626
+          '9': 5.317514086
+        emittance_mean:
+          '0': 5.0112810936
+          '1': 5.4462736246
+          '2': 4.6655082474
+          '3': 4.5366271674
+          '4': 4.9577408683
+          '5': 5.7009973619
+          '6': 4.8188988116
+          '7': 5.1584490216
+          '8': 5.3864506183
+          '9': 4.8913386717
+        min_joint_bmag:
+          '0': 1.0194014872
+          '1': 1.0137524744
+          '2': 1.3573990729
+          '3': 1.3219979645
+          '4': 1.0069147116
+          '5': 2.4897180621
+          '6': 1.1272918336
+          '7': 1.198051541
+          '8': 1.3571424354
+          '9': 1.3080501009
+        min_joint_bmag_quad_value:
+          '0': -4.4987067203
+          '1': -4.4121037455
+          '2': -4.4189155091
+          '3': -4.5672708097
+          '4': -4.4793618523
+          '5': -3.7659688271
+          '6': -4.3886252194
+          '7': -4.4563625472
+          '8': -4.3252592121
+          '9': -4.5994307826
+        min_bmag_x:
+          '0': 1.0040228038
+          '1': 1.000829249
+          '2': 1.2217130093
+          '3': 1.2149361999
+          '4': 1.0127350967
+          '5': 2.6791973262
+          '6': 1.0037275274
+          '7': 1.0339907947
+          '8': 1.1735476306
+          '9': 1.2660607977
+        min_bmag_x_quad_value:
+          '0': -3.800008
+          '1': -4.4120309
+          '2': -5.400004
+          '3': -5.3434326263
+          '4': -4.4120309
+          '5': -5.0606057576
+          '6': -3.4040483838
+          '7': -3.00001
+          '8': -3.00001
+          '9': -5.399998
+        min_bmag_y:
+          '0': 1.0342994836
+          '1': 1.0241374628
+          '2': 1.3954295362
+          '3': 1.367143894
+          '4': 1.0037554426
+          '5': 1.7748108211
+          '6': 1.2261245431
+          '7': 1.2128369191
+          '8': 1.203436528
+          '9': 1.274131937
+        min_bmag_y_quad_value:
+          '0': -4.600006
+          '1': -4.4120309
+          '2': -4.4120309
+          '3': -4.4060635758
+          '4': -4.4120309
+          '5': -3.00001
+          '6': -4.5272750909
+          '7': -4.600002
+          '8': -4.4787904848
+          '9': -4.4120309
+        nominal_bmag_x:
+          '0': 1.3572746266
+          '1': 1.4372404806
+          '2': 2.7694490108
+          '3': 2.6426125451
+          '4': 1.6113270284
+          '5': 6.2302577352
+          '6': 1.2264598271
+          '7': 1.0579452386
+          '8': 1.0043697543
+          '9': 2.8560113572
+        nominal_bmag_y:
+          '0': 11.2749378921
+          '1': 10.420839604
+          '2': 4.0617109424
+          '3': 4.5003028481
+          '4': 8.6249309875
+          '5': 2.3542686215
+          '6': 15.5647909295
+          '7': 16.0834772411
+          '8': 15.3562159714
+          '9': 4.8622105412
+        nominal_joint_bmag:
+          '0': 3.9119288231
+          '1': 3.8700455451
+          '2': 3.3539083696
+          '3': 3.4485586501
+          '4': 3.7279464076
+          '5': 3.8298433767
+          '6': 4.3691636262
+          '7': 4.1249773535
+          '8': 3.9272533483
+          '9': 3.7264632732
+        xopt_runtime:
+          '0': 64.9732669631
+          '1': 58.5523782021
+          '2': 64.183274558
+          '3': 64.4981835501
+          '4': 60.5315716169
+          '5': 62.502159571
+          '6': 59.6368745
+          '7': 60.095701406
+          '8': 60.8526893321
+          '9': 69.5579407162
+        xopt_error:
+          '0': false
+          '1': false
+          '2': false
+          '3': false
+          '4': false
+          '5': false
+          '6': false
+          '7': false
+          '8': false
+          '9': false
+      serialize_torch: false
+      serialize_inline: false
+      stopping_condition: null

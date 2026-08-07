@@ -1,0 +1,131 @@
+workflow_timestamp: 1782966437
+task_handlers:
+  minimize_energy_spread:
+  - step_index: 1
+    step_type: minimize_energy_spread
+    xopt:
+      generator:
+        returns_id: false
+        supports_batch_generation: true
+        supports_single_objective: true
+        supports_constraints: true
+        supports_discrete_variables: true
+        vocs:
+          variables:
+            KLYS:LI10:41:SFB_PDES:
+              dtype: null
+              default_value: null
+              domain:
+              - -14.343016867178344
+              - -4.343016867178344
+              type: ContinuousVariable
+          objectives:
+            rms_x:
+              dtype: null
+              type: MinimizeObjective
+          constraints: {}
+          constants: {}
+          observables: {}
+        n_monte_carlo_samples: 128
+        turbo_controller: null
+        use_cuda: false
+        gp_constructor:
+          name: standard
+          use_low_noise_prior: false
+          covar_modules: {}
+          mean_modules: {}
+          trainable_mean_keys: []
+          transform_inputs: true
+          custom_noise_prior: null
+          use_cached_hyperparameters: false
+          train_method: lbfgs
+          train_model: true
+          train_config: null
+          train_kwargs: null
+        numerical_optimizer:
+          name: LBFGS
+          n_restarts: 20
+          max_iter: 1000
+          max_time: 5.0
+          mixed_max_discrete_configurations: 512
+          discrete_max_choices: 4096
+          discrete_max_batch_size: 2048
+        max_travel_distances: null
+        fixed_features: null
+        computation_time:
+          training:
+            '0': 0.1074770619
+            '1': 0.1337510871
+            '2': 0.1153077031
+            '3': 0.0961740739
+            '4': 0.1781712682
+          acquisition_optimization:
+            '0': 0.1417759371
+            '1': 0.0892616301
+            '2': 0.0731139458
+            '3': 0.123968574
+            '4': 0.2895471149
+        custom_objective: null
+        n_interpolate_points: null
+        n_candidates: 1
+      evaluator:
+        function: autonomous_control.facet.e_spread_opt.minimize_energy_spread.<locals>.evaluate
+        max_workers: 1
+        function_kwargs: {}
+        vectorized: false
+      strict: true
+      dump_file: null
+      data:
+        KLYS:LI10:41:SFB_PDES:
+          '0': -6.410938461
+          '1': -7.5376360067
+          '2': -9.5661070853
+          '3': -11.1695467738
+          '4': -10.1581588073
+          '5': -14.3430168672
+          '6': -10.1735471639
+          '7': -10.008128647
+          '8': -10.008128647
+        rms_x:
+          '0': 273.0813556784
+          '1': 232.8672852152
+          '2': 189.0853739946
+          '3': 191.7907500283
+          '4': 188.5620873264
+          '5': 257.1219313317
+          '6': 188.3411861506
+          '7': 187.3178031134
+          '8': 184.449641966
+        rms_y:
+          '0': 172.6622468639
+          '1': 172.0209359538
+          '2': 170.2601726794
+          '3': 176.9849637527
+          '4': 174.1629228729
+          '5': 170.267034802
+          '6': 171.2284717099
+          '7': 172.907454078
+          '8': 173.3721703397
+        xopt_runtime:
+          '0': 11.483832028
+          '1': 7.487055552
+          '2': 7.4438447559
+          '3': 9.9392835661
+          '4': 8.459361718
+          '5': 11.4387088909
+          '6': 9.924277188
+          '7': 4.9598604999
+          '8': 2.429858987
+        xopt_error:
+          '0': false
+          '1': false
+          '2': false
+          '3': false
+          '4': false
+          '5': false
+          '6': false
+          '7': false
+          '8': false
+      serialize_torch: false
+      serialize_inline: false
+      stopping_condition: null

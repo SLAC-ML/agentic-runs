@@ -1,0 +1,9 @@
+- type: tcav_phasing
+  max_scan_range:
+  - 80
+  - 100
+  n_iterations: 5
+  n_initial_points: 5
+  tcav_on_amplitude: 4
+  amplitude_tolerance: 0.01
+  phase_tolerance: 0.5

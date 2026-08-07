@@ -1,0 +1,288 @@
+additional_variables: []
+badger_version: 1.5.5.dev45+gf333a632c.d20260626
+constraint_formulas: {}
+creation_ts: 2026-06-26-231545
+critical_constraint_names: []
+data:
+  QUAD:LI26:201:BCTRL:
+    '0': 7.3406
+    '1': 6.8956
+    '2': 7.64377
+    '3': 7.34795
+  QUAD:LI26:301:BCTRL:
+    '0': -4.71917
+    '1': -4.85502
+    '2': -4.81124
+    '3': -4.99433
+  QUAD:LI26:401:BCTRL:
+    '0': 5.82593
+    '1': 5.39203
+    '2': 5.5239
+    '3': 6.02894
+  QUAD:LI26:501:BCTRL:
+    '0': -5.94149
+    '1': -6.3895
+    '2': -6.22269
+    '3': -5.88374
+  QUAD:LI26:601:BCTRL:
+    '0': 12.4582
+    '1': 12.2913
+    '2': 12.5281
+    '3': 12.7294
+  QUAD:LI26:701:BCTRL:
+    '0': -12.7576
+    '1': -12.873
+    '2': -12.6823
+    '3': -12.3655
+  QUAD:LI26:801:BCTRL:
+    '0': 11.6698
+    '1': 11.2435
+    '2': 11.3485
+    '3': 11.4714
+  QUAD:LI26:901:BCTRL:
+    '0': -11.765
+    '1': -11.8347
+    '2': -11.3996
+    '3': -11.619
+  QUAD:LTUH:620:BCTRL:
+    '0': -31.277
+    '1': -31.6838
+    '2': -31.1899
+    '3': -31.6165
+  QUAD:LTUH:640:BCTRL:
+    '0': 37.5526
+    '1': 37.214
+    '2': 37.7993
+    '3': 37.6244
+  QUAD:LTUH:660:BCTRL:
+    '0': -51.6042
+    '1': -51.176
+    '2': -51.1666
+    '3': -51.2621
+  QUAD:LTUH:680:BCTRL:
+    '0': 42.2914
+    '1': 42.5172
+    '2': 41.7367
+    '3': 42.2453
+  live:
+    '0': 1
+    '1': 1
+    '2': 1
+    '3': 1
+  pulse_intensity_p80:
+    '0': 1.0964383169
+    '1': 0.7158705106
+    '2': 1.060622588
+    '3': 1.0382176388
+  timestamp:
+    '0': 1782540952.78769
+    '1': 1782540960.035516
+    '2': 1782540967.227858
+    '3': 1782540974.492337
+  xopt_error:
+    '0': false
+    '1': false
+    '2': false
+    '3': false
+  xopt_runtime:
+    '0': 7.181572855
+    '1': 7.1340360199
+    '2': 7.078762251
+    '3': 7.1487931069
+description: "Round 2: Extremum Seeking polish of all 12 HXR quads after UCB+TuRBO\
+  \ round. k=1.5 (moderate gain for 12D), oscillation_size=0.03 (conservative dither\
+  \ for 12 coupled knobs), decay_rate=0.997 (slow annealing). No constraints. Wider\
+  \ ranges \xB13 LTUH / \xB12.5 LI26 - ES converges continuously so wider bounds are\
+  \ safe (it won't jump to corners like BO)."
+environment:
+  beamrate_pv: EVNT:SYS0:1:LCLSBEAMRATE
+  beamsize_monitor_base_pv: null
+  buffer_length_s: 1.0
+  charge_pv: SIOC:SYS0:ML00:CALC252
+  check_fault_timeout: 5.0
+  check_var_timeout: 3.0
+  current_pv: BLEN:LI24:886:BIMAX
+  energy_pv: BEND:DMPH:400:BDES
+  interface:
+    name: epics
+  loss_pv: LBLM:COL0:862:A:I0_LOSSHSTSCS
+  name: lcls
+  pulse_id_pv: PATT:SYS0:1:PULSEID
+  pulse_intensity_pv: GDET:FEE1:361:ENRCHSTCUHBR
+  readonly: false
+  trim_delay: 3.0
+  validate_variable_set: true
+formulas: {}
+generator:
+  decay_rate: 0.997
+  is_active: false
+  k: 1.5
+  name: extremum_seeking
+  oscillation_size: 0.03
+  returns_id: false
+  supports_single_objective: true
+  vocs:
+    constants: {}
+    constraints: {}
+    objectives:
+      pulse_intensity_p80:
+        dtype: null
+        type: MaximizeObjective
+    observables: {}
+    variables:
+      QUAD:LI26:201:BCTRL:
+        default_value: null
+        domain:
+        - 4.84
+        - 9.84
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LI26:301:BCTRL:
+        default_value: null
+        domain:
+        - -7.22
+        - -2.22
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LI26:401:BCTRL:
+        default_value: null
+        domain:
+        - 3.33
+        - 8.33
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LI26:501:BCTRL:
+        default_value: null
+        domain:
+        - -8.44
+        - -3.44
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LI26:601:BCTRL:
+        default_value: null
+        domain:
+        - 9.96
+        - 14.96
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LI26:701:BCTRL:
+        default_value: null
+        domain:
+        - -15.26
+        - -10.26
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LI26:801:BCTRL:
+        default_value: null
+        domain:
+        - 9.17
+        - 14.17
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LI26:901:BCTRL:
+        default_value: null
+        domain:
+        - -14.26
+        - -9.26
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:620:BCTRL:
+        default_value: null
+        domain:
+        - -34.28
+        - -28.28
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:640:BCTRL:
+        default_value: null
+        domain:
+        - 34.55
+        - 40.55
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:660:BCTRL:
+        default_value: null
+        domain:
+        - -54.6
+        - -48.6
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:680:BCTRL:
+        default_value: null
+        domain:
+        - 39.29
+        - 45.29
+        dtype: null
+        type: ContinuousVariable
+id: null
+initial_point_actions: null
+initial_points:
+  QUAD:LI26:201:BCTRL:
+    '0': 7.3406
+    '1': 6.8956
+    '2': 7.64377
+    '3': 7.34795
+  QUAD:LI26:301:BCTRL:
+    '0': -4.71917
+    '1': -4.85502
+    '2': -4.81124
+    '3': -4.99433
+  QUAD:LI26:401:BCTRL:
+    '0': 5.82593
+    '1': 5.39203
+    '2': 5.5239
+    '3': 6.02894
+  QUAD:LI26:501:BCTRL:
+    '0': -5.94149
+    '1': -6.3895
+    '2': -6.22269
+    '3': -5.88374
+  QUAD:LI26:601:BCTRL:
+    '0': 12.4582
+    '1': 12.2913
+    '2': 12.5281
+    '3': 12.7294
+  QUAD:LI26:701:BCTRL:
+    '0': -12.7576
+    '1': -12.873
+    '2': -12.6823
+    '3': -12.3655
+  QUAD:LI26:801:BCTRL:
+    '0': 11.6698
+    '1': 11.2435
+    '2': 11.3485
+    '3': 11.4714
+  QUAD:LI26:901:BCTRL:
+    '0': -11.765
+    '1': -11.8347
+    '2': -11.3996
+    '3': -11.619
+  QUAD:LTUH:620:BCTRL:
+    '0': -31.277
+    '1': -31.6838
+    '2': -31.1899
+    '3': -31.6165
+  QUAD:LTUH:640:BCTRL:
+    '0': 37.5526
+    '1': 37.214
+    '2': 37.7993
+    '3': 37.6244
+  QUAD:LTUH:660:BCTRL:
+    '0': -51.6042
+    '1': -51.176
+    '2': -51.1666
+    '3': -51.2621
+  QUAD:LTUH:680:BCTRL:
+    '0': 42.2914
+    '1': 42.5172
+    '2': 41.7367
+    '3': 42.2453
+name: HXR All Quads - ES Polish Round 2 (12D wide)
+observable_formulas: {}
+relative_to_current: false
+script: null
+stopping_condition: null
+tags: null
+vrange_hard_limit: {}
+vrange_limit_options: null
+xopt_version: 3.1.1

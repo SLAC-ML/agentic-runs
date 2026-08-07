@@ -1,0 +1,316 @@
+additional_variables: []
+badger_version: 0.0.0
+constraint_formulas: {}
+creation_ts: 2026-06-26-185157
+critical_constraint_names: []
+data:
+  QUAD:LTUH:620:BCTRL:
+    '0': -36.208
+    '1': -35.7858
+    '10': -37.3467025
+    '2': -36.3914
+    '3': -36.6032
+    '4': -36.6032
+    '5': -38.43336
+    '6': -36.6032
+    '7': -36.6032
+    '8': -36.6032
+    '9': -37.51828
+  QUAD:LTUH:640:BCTRL:
+    '0': 41.6956
+    '1': 41.6229
+    '10': 42.3630689062
+    '2': 41.853
+    '3': 41.5197
+    '4': 41.5197
+    '5': 41.5197
+    '6': 43.595685
+    '7': 41.5197
+    '8': 41.5197
+    '9': 42.5576925
+  QUAD:LTUH:660:BCTRL:
+    '0': -58.3479
+    '1': -58.8237
+    '10': -56.2461875
+    '2': -58.5494
+    '3': -57.9776
+    '4': -57.9776
+    '5': -57.9776
+    '6': -57.9776
+    '7': -60.74786
+    '8': -57.9776
+    '9': -55.94786
+  QUAD:LTUH:680:BCTRL:
+    '0': 41.4462
+    '1': 41.0319
+    '10': 42.558866875
+    '2': 41.0676
+    '3': 41.7116
+    '4': 41.7116
+    '5': 41.7116
+    '6': 41.7116
+    '7': 41.7116
+    '8': 43.79718
+    '9': 42.75439
+  live:
+    '0': 1
+    '1': 1
+    '10': 1
+    '2': 1
+    '3': 1
+    '4': 1
+    '5': 1
+    '6': 1
+    '7': 1
+    '8': 1
+    '9': 1
+  pulse_intensity_p80:
+    '0': 1.5651450166
+    '1': 1.6434956102
+    '10': 1.3618737597
+    '2': 1.6369377713
+    '3': 1.611903701
+    '4': 1.6978923177
+    '5': 1.6481077951
+    '6': 1.576237089
+    '7': 1.0230835755
+    '8': 1.6435528558
+    '9': 1.4093801167
+  timestamp:
+    '0': 1782525121.564131
+    '1': 1782525125.716348
+    '10': 1782525162.007783
+    '2': 1782525129.867138
+    '3': 1782525134.049585
+    '4': 1782525138.187483
+    '5': 1782525142.251239
+    '6': 1782525146.313331
+    '7': 1782525150.449409
+    '8': 1782525154.499412
+    '9': 1782525158.559298
+  und_loss_mean:
+    '0': -0.164947
+    '1': -0.3618855
+    '10': -0.2703135
+    '2': -0.1264985
+    '3': -0.298196
+    '4': 0.0
+    '5': -0.418531
+    '6': -0.573499
+    '7': -0.031111
+    '8': -0.447294
+    '9': -0.1376515
+  xopt_error:
+    '0': false
+    '1': false
+    '10': false
+    '2': false
+    '3': false
+    '4': false
+    '5': false
+    '6': false
+    '7': false
+    '8': false
+    '9': false
+  xopt_runtime:
+    '0': 4.1194937583
+    '1': 4.0395327462
+    '10': 3.4209137103
+    '2': 4.0389455026
+    '3': 4.0707178432
+    '4': 4.0256393841
+    '5': 4.0315688597
+    '6': 4.0381347397
+    '7': 4.105262124
+    '8': 4.0245352462
+    '9': 4.0343750119
+description: Template LTUH matching quads
+environment:
+  beamrate_pv: EVNT:SYS0:1:LCLSBEAMRATE
+  beamsize_monitor_base_pv: null
+  buffer_length_s: 1.0
+  charge_pv: SIOC:SYS0:ML00:CALC252
+  check_fault_timeout: 5.0
+  check_var_timeout: 1.0
+  current_pv: BLEN:LI24:886:BIMAX
+  energy_pv: BEND:DMPH:400:BDES
+  interface:
+    name: epics
+  loss_pv: CBLM:UNDH:1375:I1_LOSSHSTBR
+  name: lcls
+  pulse_id_pv: PATT:SYS0:1:PULSEID
+  pulse_intensity_pv: GDET:FEE1:361:ENRCHSTCUHBR
+  readonly: false
+  trim_delay: 2.0
+  validate_variable_set: true
+formulas: {}
+generator:
+  adaptive: true
+  current_state:
+    N: 4
+    astg: 3
+    doshrink: 0
+    fsim:
+    - -1.6978923177490741
+    - -1.6481077950981216
+    - -1.6435528557930865
+    - -1.5762370889799058
+    - -1.023083575468536
+    fxr: -1.4093801166649882
+    ind:
+    - 0.0
+    - 1.0
+    - 2.0
+    - 3.0
+    - 4.0
+    jend: 0
+    kend: 5
+    ngen: 7
+    sim:
+    - - -36.6032
+      - 41.5197
+      - -57.9776
+      - 41.7116
+    - - -38.43336
+      - 41.5197
+      - -57.9776
+      - 41.7116
+    - - -36.6032
+      - 41.5197
+      - -57.9776
+      - 43.79718
+    - - -36.6032
+      - 43.595685
+      - -57.9776
+      - 41.7116
+    - - -36.6032
+      - 41.5197
+      - -60.747859999999996
+      - 41.7116
+    x: null
+    xbar:
+    - -37.06074
+    - 42.03869625
+    - -57.9776
+    - 42.232994999999995
+    xc:
+    - -37.3467025
+    - 42.36306890625
+    - -56.246187500000005
+    - 42.55886687499999
+    xcc: null
+    xe: null
+    xr:
+    - -37.518280000000004
+    - 42.5576925
+    - -55.94786
+    - 42.754389999999994
+  future_state: null
+  initial_point: null
+  initial_simplex: null
+  is_active: true
+  manual_data_cnt: 4
+  name: neldermead
+  returns_id: false
+  supports_single_objective: true
+  trace: false
+  vocs:
+    constants: {}
+    constraints: {}
+    objectives:
+      pulse_intensity_p80:
+        dtype: null
+        type: MaximizeObjective
+    observables:
+      und_loss_mean:
+        dtype: null
+        type: Observable
+    variables:
+      QUAD:LTUH:620:BCTRL:
+        default_value: null
+        domain:
+        - -38.60803
+        - -33.80803
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:640:BCTRL:
+        default_value: null
+        domain:
+        - 39.295590000000004
+        - 44.09559
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:660:BCTRL:
+        default_value: null
+        domain:
+        - -60.747859999999996
+        - -55.94786
+        dtype: null
+        type: ContinuousVariable
+      QUAD:LTUH:680:BCTRL:
+        default_value: null
+        domain:
+        - 39.04619
+        - 43.84619
+        dtype: null
+        type: ContinuousVariable
+  x: null
+  y: -1.3618737596615575
+id: null
+initial_point_actions:
+- type: add_curr
+- config:
+    fraction: 0.1
+    method: 0
+    n_points: 3
+  type: add_rand
+initial_points:
+  QUAD:LTUH:620:BCTRL:
+    '0': -36.208
+    '1': -35.7858
+    '2': -36.3914
+    '3': -36.6032
+  QUAD:LTUH:640:BCTRL:
+    '0': 41.6956
+    '1': 41.6229
+    '2': 41.853
+    '3': 41.5197
+  QUAD:LTUH:660:BCTRL:
+    '0': -58.3479
+    '1': -58.8237
+    '2': -58.5494
+    '3': -57.9776
+  QUAD:LTUH:680:BCTRL:
+    '0': 41.4462
+    '1': 41.0319
+    '2': 41.0676
+    '3': 41.7116
+name: LTUH matching quads
+observable_formulas: {}
+relative_to_current: true
+script: null
+stopping_condition: null
+tags: null
+vrange_hard_limit: {}
+vrange_limit_options:
+  QUAD:LTUH:620:BCTRL:
+    delta: 2.4
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:640:BCTRL:
+    delta: 2.4
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:660:BCTRL:
+    delta: 2.4
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+  QUAD:LTUH:680:BCTRL:
+    delta: 2.4
+    limit_option_idx: 2
+    ratio_curr: 0.1
+    ratio_full: 0.1
+xopt_version: 3.0.1
